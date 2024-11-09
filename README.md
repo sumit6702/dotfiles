@@ -9,4 +9,9 @@ To set up these dotfiles on a new machine:
 1. Clone the repository:
    ```bash
    git clone --recursive https://github.com/sumitk702/dotfiles.git ~/.dotfiles
-
+2. Install Script
+  ```bash
+  cd ~/.dotfiles && ./install
+3. Uninstall Script
+  ```bash
+  cd ~/.dotfiles && ./uninstall
