@@ -1,6 +1,6 @@
 # My Dotfiles
 
-This repository contains my personal dotfiles and configuration files, managed using [Dotbot](https://github.com/anishathalye/dotbot) for easy installation and setup.
+This repository contains my personal dotfiles and configuration files, managed using custom bash script for easy installation and setup.
 
 ## Installation
 
@@ -11,7 +11,4 @@ To set up these dotfiles on a new machine:
    git clone --recursive https://github.com/sumitk702/dotfiles.git ~/.dotfiles
 2. Install dotfiles
    ```bash
-   cd ~/.dotfiles && ./install
-3. Uninstall dotfiles
-   ```bash
-   cd ~/.dotfiles && ./uninstall
+   cd ~/.dotfiles && ./install.sh
