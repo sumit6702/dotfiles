@@ -15,6 +15,7 @@ declare -A options=(
     [11]="$HOME/.config/yazi:yazi"
     [12]="$HOME/.local/share/scripts:scripts"
     [13]="$HOME/.local/share/wallpapers:wallpapers"
+    [14]="$HOME/.config/btop:btop"
 )
 
 # Display available options
