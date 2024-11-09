@@ -67,6 +67,8 @@ zoxide init --cmd cd fish | source
 
 oh-my-posh init fish --config ~/.config/ohmyposh/catt_latte.omp.json | source
 
+set -U fish_user_paths /usr/bin/lua-language-server
+
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
