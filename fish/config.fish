@@ -52,6 +52,17 @@ function y
 	rm -f -- "$tmp"
 end
 
+# For Fish users - add to ~/.config/fish/config.fish
+# if test -z "$ZELLIJ"
+#     if test "$ZELLIJ_AUTO_ATTACH" = "true"
+#         zellij attach -c
+#     else
+#         zellij
+#     end 
+#     # Exit if zellij is closed
+#     exit
+# end
+
 zoxide init --cmd cd fish | source
 
 oh-my-posh init fish --config ~/.config/ohmyposh/catt_latte.omp.json | source
