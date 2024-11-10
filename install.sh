@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
 # Define options for linking
 declare -A options=(
     [1]="$HOME/.config/fish:fish"
@@ -16,64 +22,150 @@ declare -A options=(
     [12]="$HOME/.local/share/scripts:scripts"
     [13]="$HOME/.local/share/wallpapers:wallpapers"
     [14]="$HOME/.config/btop:btop"
+    [15]="$HOME/.config/spicetify:spicetify"
+    [16]="$HOME/.config/zed:zed"
 )
 
-# Display available options
-echo "Available files to link:"
-for key in "${!options[@]}"; do
-    echo "$key) ${options[$key]}"
-done
+# Function to display usage
+usage() {
+    echo -e "${YELLOW}Usage: $0 [install|uninstall]${NC}"
+    echo "Commands:"
+    echo "  install   - Install and link dotfiles"
+    echo "  uninstall - Remove dotfiles symlinks"
+    exit 1
+}
 
-# Prompt for user input
-echo "Select options to link (e.g., 1,2,3 or 1-3 or 'all'): "
-read -r selection
+# Function to display options
+display_options() {
+    echo -e "${GREEN}Available files:${NC}"
+    for key in "${!options[@]}"; do
+        echo "$key) ${options[$key]}"
+    done
+}
 
-# Parse input
-if [[ "$selection" == "all" ]]; then
-    selected_keys=("${!options[@]}")
-else
-    selected_keys=()
-    IFS=',' read -ra ranges <<< "$selection"
-    for range in "${ranges[@]}"; do
-        if [[ "$range" == *-* ]]; then
-            start="${range%-*}"
-            end="${range#*-}"
-            for ((i = start; i <= end; i++)); do
-                selected_keys+=("$i")
-            done
+# Function to parse selection
+parse_selection() {
+    local selection="$1"
+    local -a selected_keys=()
+    
+    if [[ "$selection" == "all" ]]; then
+        selected_keys=("${!options[@]}")
+    else
+        IFS=',' read -ra ranges <<< "$selection"
+        for range in "${ranges[@]}"; do
+            if [[ "$range" =~ ^[0-9]+-[0-9]+$ ]]; then
+                start="${range%-*}"
+                end="${range#*-}"
+                if ((start > end)); then
+                    echo -e "${RED}Error: Invalid range $range (start > end)${NC}"
+                    exit 1
+                fi
+                for ((i = start; i <= end; i++)); do
+                    selected_keys+=("$i")
+                done
+            elif [[ "$range" =~ ^[0-9]+$ ]]; then
+                selected_keys+=("$range")
+            else
+                echo -e "${RED}Error: Invalid selection format: $range${NC}"
+                exit 1
+            fi
+        done
+    fi
+    echo "${selected_keys[@]}"
+}
+
+# Function to create backup
+create_backup() {
+    local target="$1"
+    if [ -e "$target" ] && [ ! -L "$target" ]; then
+        local backup="${target}.backup.$(date +%Y%m%d_%H%M%S)"
+        echo -e "${YELLOW}Creating backup: $backup${NC}"
+        mv "$target" "$backup"
+    fi
+}
+
+# Function to install dotfiles
+install_dotfiles() {
+    display_options
+    echo -e "${GREEN}Select options to link (e.g., 1,2,3 or 1-3 or 'all'): ${NC}"
+    read -r selection
+    
+    local selected_keys=($(parse_selection "$selection"))
+    
+    # Create necessary directories and perform linking
+    for key in "${selected_keys[@]}"; do
+        if [[ -n "${options[$key]}" ]]; then
+            target="${options[$key]%%:*}"
+            source_name="${options[$key]#*:}"
+            source="$(pwd)/$source_name"
+            
+            # Check if source exists
+            if [ ! -e "$source" ]; then
+                echo -e "${RED}Error: Source directory/file does not exist: $source${NC}"
+                continue
+            fi
+            
+            # Create target directory if it doesn't exist
+            target_dir=$(dirname "$target")
+            mkdir -p "$target_dir"
+            
+            # Create backup if necessary and remove existing link
+            create_backup "$target"
+            [ -L "$target" ] && rm "$target"
+            
+            echo -e "${GREEN}Linking $source -> $target${NC}"
+            if ln -sf "$source" "$target"; then
+                echo -e "${GREEN}Successfully linked $source${NC}"
+            else
+                echo -e "${RED}Failed to link $source${NC}"
+            fi
         else
-            selected_keys+=("$range")
+            echo -e "${RED}Invalid option: $key${NC}"
         fi
     done
-fi
+}
 
-# Create necessary directories if they don't exist
-for key in "${selected_keys[@]}"; do
-    if [[ -n "${options[$key]}" ]]; then
-        target="${options[$key]%%:*}"
-        target_dir=$(dirname "$target")
-        mkdir -p "$target_dir"
-    fi
-done
-
-# Apply selected links
-for key in "${selected_keys[@]}"; do
-    if [[ -n "${options[$key]}" ]]; then
-        # Split target path and source directory name
-        target="${options[$key]%%:*}"
-        source_name="${options[$key]#*:}"
-        
-        # Construct full source path (assuming script is run from dotfiles directory)
-        source="$(pwd)/$source_name"
-        
-        # Remove existing link or file
-        if [ -e "$target" ] || [ -L "$target" ]; then
-            rm -rf "$target"
+# Function to uninstall dotfiles
+uninstall_dotfiles() {
+    display_options
+    echo -e "${YELLOW}Select options to unlink (e.g., 1,2,3 or 1-3 or 'all'): ${NC}"
+    read -r selection
+    
+    local selected_keys=($(parse_selection "$selection"))
+    
+    for key in "${selected_keys[@]}"; do
+        if [[ -n "${options[$key]}" ]]; then
+            target="${options[$key]%%:*}"
+            
+            if [ -L "$target" ]; then
+                echo -e "${YELLOW}Removing symlink: $target${NC}"
+                rm "$target"
+                echo -e "${GREEN}Successfully removed symlink${NC}"
+                
+                # Restore backup if it exists
+                backup=$(find "$(dirname "$target")" -maxdepth 1 -name "$(basename "$target").backup.*" | sort -r | head -n1)
+                if [ -n "$backup" ]; then
+                    echo -e "${GREEN}Restoring backup: $backup${NC}"
+                    mv "$backup" "$target"
+                fi
+            else
+                echo -e "${YELLOW}No symlink found at $target${NC}"
+            fi
+        else
+            echo -e "${RED}Invalid option: $key${NC}"
         fi
-        
-        echo "Linking $source -> $target"
-        ln -sf "$source" "$target"
-    else
-        echo "Invalid option: $key"
-    fi
-done
+    done
+}
+
+# Main script
+case "$1" in
+    "install")
+        install_dotfiles
+        ;;
+    "uninstall")
+        uninstall_dotfiles
+        ;;
+    *)
+        usage
+        ;;
+esac

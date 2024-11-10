@@ -42,7 +42,8 @@ if [ "$1" = "save" ]; then
         }
     }
     ' > "$hypr_session"
-
+    
+    notify-send "Hyprland" "Session saved"
     echo -e "${GREEN}Session saved...${ECOL}"
 elif [ "$1" = "load" ]; then
     
@@ -69,7 +70,8 @@ elif [ "$1" = "load" ]; then
        fi
        sleep 0.2   
     done < "$hypr_session"
-
+    
+    notify-send "Hyprland" "Session restored"
     echo -e "${GREEN}Session restored...${ECOL}"
 
 else
