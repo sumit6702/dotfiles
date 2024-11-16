@@ -35,44 +35,23 @@ usage() {
     exit 1
 }
 
-# Function to display options
-display_options() {
-    echo -e "${GREEN}Available files:${NC}"
-    for key in "${!options[@]}"; do
-        echo "$key) ${options[$key]}"
-    done
+# Function to parse selection using fzf
+parse_selection_fzf() {
+    local action="$1"
+    local selections
+    selections=$(for key in $(printf "%s\n" "${!options[@]}" | sort -n); do
+        echo "[$key] ${options[$key]}"
+    done | fzf --multi --prompt="Select options to $action > " --header="Use TAB to select multiple options and ENTER to confirm")
+    
+    if [[ -z "$selections" ]]; then
+        echo -e "${RED}No selection made. Exiting.${NC}"
+        exit 1
+    fi
+
+    # Extract selected keys
+    echo "$selections" | awk -F']' '{print $1}' | tr -d '['
 }
 
-# Function to parse selection
-parse_selection() {
-    local selection="$1"
-    local -a selected_keys=()
-    
-    if [[ "$selection" == "all" ]]; then
-        selected_keys=("${!options[@]}")
-    else
-        IFS=',' read -ra ranges <<< "$selection"
-        for range in "${ranges[@]}"; do
-            if [[ "$range" =~ ^[0-9]+-[0-9]+$ ]]; then
-                start="${range%-*}"
-                end="${range#*-}"
-                if ((start > end)); then
-                    echo -e "${RED}Error: Invalid range $range (start > end)${NC}"
-                    exit 1
-                fi
-                for ((i = start; i <= end; i++)); do
-                    selected_keys+=("$i")
-                done
-            elif [[ "$range" =~ ^[0-9]+$ ]]; then
-                selected_keys+=("$range")
-            else
-                echo -e "${RED}Error: Invalid selection format: $range${NC}"
-                exit 1
-            fi
-        done
-    fi
-    echo "${selected_keys[@]}"
-}
 
 # Function to create backup
 create_backup() {
@@ -86,14 +65,11 @@ create_backup() {
 
 # Function to install dotfiles
 install_dotfiles() {
-    display_options
-    echo -e "${GREEN}Select options to link (e.g., 1,2,3 or 1-3 or 'all'): ${NC}"
-    read -r selection
+    local selections
+    selections=$(parse_selection_fzf "install")
     
-    local selected_keys=($(parse_selection "$selection"))
-    
-    # Create necessary directories and perform linking
-    for key in "${selected_keys[@]}"; do
+    while read -r line; do
+        key="${line%%)*}"
         if [[ -n "${options[$key]}" ]]; then
             target="${options[$key]%%:*}"
             source_name="${options[$key]#*:}"
@@ -122,18 +98,16 @@ install_dotfiles() {
         else
             echo -e "${RED}Invalid option: $key${NC}"
         fi
-    done
+    done <<< "$selections"
 }
 
 # Function to uninstall dotfiles
 uninstall_dotfiles() {
-    display_options
-    echo -e "${YELLOW}Select options to unlink (e.g., 1,2,3 or 1-3 or 'all'): ${NC}"
-    read -r selection
+    local selections
+    selections=$(parse_selection_fzf "uninstall")
     
-    local selected_keys=($(parse_selection "$selection"))
-    
-    for key in "${selected_keys[@]}"; do
+    while read -r line; do
+        key="${line%%)*}"
         if [[ -n "${options[$key]}" ]]; then
             target="${options[$key]%%:*}"
             
@@ -154,7 +128,7 @@ uninstall_dotfiles() {
         else
             echo -e "${RED}Invalid option: $key${NC}"
         fi
-    done
+    done <<< "$selections"
 }
 
 # Main script
@@ -169,3 +143,4 @@ case "$1" in
         usage
         ;;
 esac
+

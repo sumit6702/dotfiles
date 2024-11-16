@@ -6,11 +6,10 @@
 local M = {}
 
 M.base46 = {
-	theme = "material-lighter",
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+  theme = "gruvchad",
+  transparency = true,
+  hl_override = {},
+  theme_toggle = { "gruvchad", "one_light" },
 }
 
 M.nvdash = {

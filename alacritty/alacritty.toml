@@ -2,13 +2,13 @@ window.opacity = 1.0
 
 [general]
 live_config_reload = true
-import = ["/home/sumit/.config/alacritty/catppuccin-latte.toml"]
+import = ["./themes/wallbash.toml"]
 
 [font]
 size = 12
 
 [font.normal]
-family = "FiraCode Nerd Font"
+#family = "FiraCode Nerd Font"
 style = "Regular"
 
 [[keyboard.bindings]]
