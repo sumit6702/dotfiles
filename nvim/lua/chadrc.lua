@@ -6,10 +6,10 @@
 local M = {}
 
 M.base46 = {
-  theme = "gruvchad",
+  theme = "chadtain",
   transparency = true,
   hl_override = {},
-  theme_toggle = { "gruvchad", "one_light" },
+  theme_toggle = { "chadtain", "one_light" },
 }
 
 M.nvdash = {
