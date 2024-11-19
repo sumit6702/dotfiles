@@ -1,0 +1,72 @@
+$HOME/.zen/'tsgtn71d.Default (alpha)'/chrome/userChrome.css|$HOME/.local/share/scripts/zen-restart.sh
+:root {
+        --zen-primary-color: <wallbash_txt1_rgba(1)> !important;
+        --zen-colors-primary: <wallbash_pry1_rgba(0.8)> !important;
+        --zen-colors-secondary: <wallbash_1xa2_rgba(1)> !important;
+        --zen-colors-tertiary: <wallbash_pry1_rgba(0.8)> !important;
+        --zen-colors-border: <wallbash_1xa1_rgba(1)> !important;
+        --zen-dialog-background: #<wallbash_1xa1> !important;
+}
+
+
+
+#nav-bar, 
+#zen-sidebar-top-buttons,
+#navigator-toolbox,
+#tabbrowser-tabpanels{
+  background-color: var(--zen-colors-primary) !important;
+}
+
+#urlbar,
+#urlbar-background{
+  background-color: var(--zen-colors-primary) !important;
+}
+
+
+#PersonalToolbar {
+  background: var(--zen-colors-primary) !important;
+  padding-right: 6px !important;
+  padding-left: 6px !important;
+}
+
+.toolbarbutton-animatable-box, .toolbarbutton-1{
+  fill: var(--zen-primary-color) !important;
+}
+
+
+#zen-appcontent-navbar-container {
+ background: var(--zen-colors-primary) !important;
+  padding-top: 0px !important;
+}
+
+menupopup, panel {
+  &::part(content){
+    background: var(--zen-colors-primary) !important;
+}}
+
+menupopup .menupopup-arrowscrollbox, panel .menupopup-arrowscrollbox {
+  background-color: var(--zen-colors-primary) !important;
+}
+
+menupopup,
+panel {
+
+  color-scheme: light dark;
+
+  min-width: 1px;
+  --panel-background: var(--zen-colors-primary) !important;
+  --panel-color: var(--zen-primary-color) !important;
+  --panel-border-color: var(--zen-colors-border) !important;
+  @media (-moz-platform: linux) {
+    @media (prefers-contrast) {
+      --panel-border-color: var(--zen-colors-border) !important;
+    }
+  }
+  &::part(content) {
+    color: var(--panel-color);
+    background: var(--panel-background);
+    border: 1px solid var(--panel-border-color);
+  }
+}
+
+
