@@ -8,7 +8,7 @@ To set up these dotfiles on a new machine:
 
 1. Clone the repository:
    ```bash
-   git clone --recursive https://github.com/sumitk702/dotfiles.git ~/.dotfiles
+   git clone --recursive https://github.com/sumitk702/dotfiles.git
 2. Update Install dotfiles
    ```bash
    cd ~/.dotfiles && chmod +x install.sh
