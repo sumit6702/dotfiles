@@ -1,0 +1,45 @@
+$HOME/.zen/'7xmgfhad.Default (alpha)'/chrome/userChrome.css|$HOME/.local/share/scripts/zen-restart.sh
+
+:root {
+        --zen-primary-color: #<wallbash_txt1> !important;
+        --zen-colors-primary: #<wallbash_pry1> !important;
+        --zen-colors-secondary: #<wallbash_1xa2> !important;
+        --zen-colors-tertiary: #<wallbash_1xa3> !important;
+        --zen-colors-border: #<wallbash_txt1> !important;
+        --zen-dialog-background: #<wallbash_pry1> !important;
+}
+
+toolbarbutton,
+menuitem, menu{
+  color: var(--zen-primary-color) !important;
+  fill:  var(--zen-primary-color) !important;
+}
+
+#browser,
+#titlebar,
+#zen-appcontent-navbar-container,
+#urlbar,
+tooltip,
+#urlbar-background{
+  background-color: var(--zen-colors-primary) !important;
+  color: var(--zen-primary-color) !important;
+  fill:  var(--zen-primary-color) !important;
+}
+
+
+/* CUSTOM TWEAKS */
+
+/* Remove Action Button for firefox for HYPRLAND */
+.titlebar-buttonbox-container{
+  display: none !important;
+}
+
+menuseparator{
+  display: none !important;
+}
+
+menu, menuitem {
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important;
+}
+
