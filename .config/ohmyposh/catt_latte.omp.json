@@ -1,0 +1,138 @@
+$HOME/.config/ohmyposh/opm_wallbash.json
+{
+  "palette": {
+    "c_fg": "<wallbash_txt1>",
+    "c_bg": "<wallbash_pry1>",
+    "c1_bg": "<wallbash_1xa1>",
+    "c2_bg": "<wallbash_1xa2>",
+    "c3_bg": "<wallbash_1xa3>",
+    "c4_bg": "<wallbash_1xa4>",
+    "c5_bg": "<wallbash_1xa5>",
+    "c6_bg": "<wallbash_1xa6>",
+    "c7_bg": "<wallbash_1xa7>",
+
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "background": "transparent",
+          "foreground": "p:c_fg",
+          "style": "plain",
+          "template": "\u250c",
+          "type": "text"
+        },
+        {
+          "background": "p:c_bg",
+          "foreground": "p:c_fg",
+          "properties": {
+            "windows": "\ue62a",
+            "linux": "\uf17c",
+            "ubuntu": "\uf31b",
+            "macos": "\uf179"
+          },
+          "style": "plain",
+          "template": " {{.Icon}}{{if .WSL}} (WSL){{end}}\u2800",
+          "type": "os"
+        },
+        {
+          "background": "p:c2_bg",
+          "foreground": "p:c_fg",
+          "style": "plain",
+          "template": " \uf489 {{.Name}}\u2800",
+          "type": "shell"
+        },
+        {
+          "background": "p:c3_bg",
+          "foreground": "p:c_fg",
+          "style": "plain",
+          "template": " \uf2c0 {{.HostName}}\ue0bd{{.UserName}}\u2800",
+          "type": "session"
+        },
+        {
+          "background": "p:c4_bg",
+          "foreground": "p:c_fg",
+          "properties": {
+            "branch_icon": " \ue0a0 "
+          },
+          "style": "plain",
+          "template": "{{.HEAD}}\u2800",
+          "type": "git"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "transparent",
+          "foreground": "p:c_fg",
+          "properties": {
+            "style": "austin",
+            "threshold": 0
+          },
+          "style": "plain",
+          "template": "{{.FormattedMs}}",
+          "type": "executiontime"
+        },
+        {
+          "background": "transparent",
+          "foreground": "p:c_fg",
+          "properties": {
+            "time_format": "02/01/06 15:04"
+          },
+          "style": "plain",
+          "template": "<p:c1_fg> · </>{{.CurrentDate | date .Format}}",
+          "type": "time"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "background": "transparent",
+          "foreground": "p:c1_fg",
+          "properties": {
+            "folder_icon": "\uf07b",
+            "folder_separator_template": "<p:c7_bg> \u00bb </>",
+            "home_icon": "\ueb06",
+            "style": "agnoster"
+          },
+          "style": "plain",
+          "template": "<p:c1_fg>\u2514</><p:c7_bg>[</> {{.Path}} <p:c7_bg>]</>",
+          "type": "path"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "background": "transparent",
+          "foreground": "p:c_fg",
+          "foreground_templates": [
+            "{{if gt .Code 0}}#ff3030{{end}}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "\u276f",
+          "type": "status"
+        }
+      ]
+    }
+  ],
+  "console_title_template": "{{if .Root}}[root] {{end}}{{.Shell}} in <{{.Folder}}>",
+  "final_space": true,
+  "version": 3
+}

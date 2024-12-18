@@ -1,21 +1,34 @@
 # My Dotfiles
 
-This repository contains my personal dotfiles and configuration files, managed using custom bash script for easy installation and setup.
+Easily manage and set up your personal dotfiles with a custom Bash script.
+
+## Features
+
+- One-click installation and uninstallation.
+- Backup existing configurations before overwriting.
+- Interactive menu with `fzf`.
+
+## Prerequisites
+
+Install `fzf` before proceeding:
+
+```bash
+# Arch Linux
+sudo pacman -S fzf
+
+# Debian/Ubuntu
+sudo apt install fzf
+```
 
 ## Installation
 
-To set up these dotfiles on a new machine:
+```bash
+# Clone the repository
+git clone https://github.com/sumit-patel/dotfiles.git
 
-1. Clone the repository:
-   ```bash
-   git clone --recursive https://github.com/sumitk702/dotfiles.git
-2. Update Install dotfiles
-   ```bash
-   cd dotfiles && chmod +x install.sh
-3. Install dotfiles
-   ```bash
-   ./install.sh install #For Installing
-3. Uninstall dotfiles
-   ```bash
-   ./iinstall.sh unintall #For Uninstalling
+# Navigate to the repository directory
+cd dotfiles
 
+# Install the script
+./install.sh
+```
