@@ -7,13 +7,13 @@
       "segments": [
         {
           "background": "transparent",
-          "foreground": "#65A3A1",
+          "foreground": "#9765A3",
           "style": "plain",
           "template": "\u250c",
           "type": "text"
         },
         {
-          "background": "#294E52",
+          "background": "#452952",
           "foreground": "#FFFFFF",
           "properties": {
             "windows": "\ue62a",
@@ -26,21 +26,21 @@
           "type": "os"
         },
         {
-          "background": "#3A676B",
+          "background": "#5C3A6B",
           "foreground": "#FFFFFF",
           "style": "plain",
           "template": " \uf489 {{.Name}}\u2800",
           "type": "shell"
         },
         {
-          "background": "#4B797D",
+          "background": "#6E4B7D",
           "foreground": "#FFFFFF",
           "style": "plain",
           "template": " \uf2c0 {{.HostName}}\ue0bd{{.UserName}}\u2800",
           "type": "session"
         },
         {
-          "background": "#578A8F",
+          "background": "#7E578F",
           "foreground": "#FFFFFF",
           "properties": {
             "branch_icon": " \ue0a0 "
@@ -57,7 +57,7 @@
       "segments": [
         {
           "background": "transparent",
-          "foreground": "#151414",
+          "foreground": "#FAFAFA",
           "properties": {
             "style": "austin",
             "threshold": 0
@@ -68,7 +68,7 @@
         },
         {
           "background": "transparent",
-          "foreground": "#151414",
+          "foreground": "#FAFAFA",
           "properties": {
             "time_format": "02/01/06 15:04"
           },
@@ -85,15 +85,15 @@
       "segments": [
         {
           "background": "transparent",
-          "foreground": "#151414",
+          "foreground": "#FAFAFA",
           "properties": {
             "folder_icon": "\uf07b",
-            "folder_separator_template": "<#65A3A1> \u00bb </>",
+            "folder_separator_template": "<#9765A3> \u00bb </>",
             "home_icon": "\ueb06",
             "style": "agnoster"
           },
           "style": "plain",
-          "template": "<#65A3A1>\u2514</><#65A3A1>[</> {{.Path}} <#65A3A1>]</>",
+          "template": "<#9765A3>\u2514</><#9765A3>[</> {{.Path}} <#9765A3>]</>",
           "type": "path"
         }
       ]

@@ -4,7 +4,7 @@
   "scalingPriority": "hyprland",
   "menus.transitionTime": 400,
   "theme.font.weight": 500,
-  "theme.font.name": "FiraCode Nerd Font Propo Medium",
+  "theme.font.name": "JetBrainsMonoNL Nerd Font",
   "theme.notification.scaling": 100,
   "theme.bar.floating": true,
   "theme.bar.menus.opacity": 100,
@@ -35,8 +35,11 @@
   "menus.bluetooth.showBattery": false,
   "theme.notification.border_radius": "0.6em",
   "theme.osd.radius": "0em",
-  "theme.bar.border_radius": "2em",
+  "theme.bar.border_radius": "1em",
   "bar.battery.hideLabelWhenFull": false,
   "bar.media.truncation_size": 37,
-  "menus.clock.weather.key": "108cc831f7ef44f590c73248241810"
+  "menus.clock.weather.key": "108cc831f7ef44f590c73248241810",
+  "theme.bar.border.location": "full",
+  "theme.bar.border.width": "0.3em",
+  "theme.bar.location": "bottom"
 }

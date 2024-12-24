@@ -22,17 +22,16 @@ alias rmd="rm -r"
 alias free="free -m"
 alias c='clear'
 alias e="exit"
-alias zed=zeditor
-alias ff='fastfetch'
+alias f='fastfetch'
 alias i='sudo pacman -S'
-alias uni='sudo pacman -Rs'
+alias ui='sudo pacman -Rs'
 alias upg='sudo pacman -Syu && yay -Syu'
 alias yi='yay -S'
 alias yu='yay -Rs'
-alias apks='$HOME/.config/scripts/apkau.sh'
 alias ze='zellij'
 alias p='cd projects'
 alias stm='systemctl'
+alias code='codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland'
 
 #Handy change dir shortcuts
 abbr .. 'cd ..'
