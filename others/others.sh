@@ -19,6 +19,9 @@ done
 echo "Choose a file to link:"
 read choice
 
+echo "Link Mode Hard -> -f | SOFT -> -sf"
+read link_mode
+
 # Check if the chosen file is valid
 if [[ -n "${files[$choice]}" ]]; then
   target_file="${files[$choice]}"
@@ -31,7 +34,7 @@ if [[ -n "${files[$choice]}" ]]; then
   for f in "$P/$file_name/"* ; do
     filename=$(basename "$f")
      echo "linking $f -> $target_loc/$filename"
-    ln -sf "$P/$file_name/$filename"  "$target_loc/$filename"
+    ln $link_mode "$P/$file_name/$filename"  "$target_loc/$filename"
   done
 
 else
