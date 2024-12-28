@@ -1,126 +1,167 @@
 $HOME/.config/ohmyposh/omp_wallbash.json
 {
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
-      "type": "prompt",
-      "alignment": "left",
-      "newline": true,
+      "alignment": "right",
       "segments": [
         {
-          "background": "transparent",
-          "foreground": "#<wallbash_3xa5>",
-          "style": "plain",
-          "template": "\u250c",
-          "type": "text"
+          "background": "#<wallbash_1xa1>",
+          "foreground": "#<wallbash_txt1>",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "{{ .UserName }}",
+          "trailing_diamond": "\ue0b4 ",
+          "type": "session"
+        },
+        {
+          "background": "#<wallbash_1xa1>",
+          "foreground": "#<wallbash_txt2>",
+          "leading_diamond": "\ue0b6",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "diamond",
+          "template": "\ue5ff {{ .Path }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "path"
         },
         {
           "background": "#<wallbash_1xa1>",
           "foreground": "#<wallbash_txt1>",
+          "leading_diamond": " \ue0b6",
           "properties": {
-            "windows": "\ue62a",
-            "linux": "\uf17c",
-            "ubuntu": "\uf31b",
-            "macos": "\uf179"
+            "branch_icon": ""
           },
-          "style": "plain",
-          "template": " {{.Icon}}{{if .WSL}} (WSL){{end}}\u2800",
-          "type": "os"
-        },
-        {
-          "background": "#<wallbash_1xa2>",
-          "foreground": "#<wallbash_txt1>",
-          "style": "plain",
-          "template": " \uf489 {{.Name}}\u2800",
-          "type": "shell"
-        },
-        {
-          "background": "#<wallbash_1xa3>",
-          "foreground": "#<wallbash_txt1>",
-          "style": "plain",
-          "template": " \uf2c0 {{.HostName}}\ue0bd{{.UserName}}\u2800",
-          "type": "session"
-        },
-        {
-          "background": "#<wallbash_1xa4>",
-          "foreground": "#<wallbash_txt1>",
-          "properties": {
-            "branch_icon": " \ue0a0 "
-          },
-          "style": "plain",
-          "template": "{{.HEAD}}\u2800",
+          "style": "diamond",
+          "template": "{{ .HEAD }}",
+          "trailing_diamond": "\ue0b4",
           "type": "git"
+        },
+        {
+          "background": "#<wallbash_1xa1>",
+          "foreground": "#<wallbash_txt2>",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "diamond",
+          "template": "\ue235{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "python"
+        },
+        {
+          "background": "#<wallbash_1xa1>",
+          "foreground": "#<wallbash_txt3>",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "diamond",
+          "template": "\ue626{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "go"
+        },
+        {
+          "background": "#<wallbash_1xa1>",
+          "foreground": "#<wallbash_txt2>",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "diamond",
+          "template": "\ue718{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "node"
+        },
+        {
+          "background": "#<wallbash_1xa1>",
+          "foreground": "#<wallbash_txt1>",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "diamond",
+          "template": "\ue791{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "ruby"
+        },
+        {
+          "background": "#<wallbash_1xa1>",
+          "foreground": "#<wallbash_txt1>",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "diamond",
+          "template": "\ue738{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "java"
+        },
+        {
+          "background": "#<wallbash_1xa1>",
+          "foreground": "#<wallbash_txt3>",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": false
+          },
+          "style": "diamond",
+          "template": "\ue624{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "julia"
+        },
+        {
+          "background": "#<wallbash_1xa1>",
+          "foreground": "#<wallbash_txt3>",
+          "foreground_templates": [
+            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
+            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
+            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
+          ],
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "charged_icon": " ",
+            "charging_icon": "\u21e1 ",
+            "discharging_icon": "\u21e3 "
+          },
+          "style": "diamond",
+          "template": "{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "battery"
         }
-      ]
+      ],
+      "type": "prompt"
     },
     {
-      "type": "prompt",
-      "alignment": "right",
+      "alignment": "left",
+      "newline": true,
       "segments": [
         {
-          "background": "transparent",
-          "foreground": "#<wallbash_txt3>",
+          "background": "#<wallbash_1xa1>",
+          "foreground": "#<wallbash_txt1>",
+          "leading_diamond": "\ue0b6",
           "properties": {
             "style": "austin",
-            "threshold": 0
+            "threshold": 150
           },
-          "style": "plain",
-          "template": "{{.FormattedMs}}",
+          "style": "diamond",
+          "template": "{{ .FormattedMs }}",
+          "trailing_diamond": "\ue0b4 ",
           "type": "executiontime"
         },
         {
-          "background": "transparent",
-          "foreground": "#<wallbash_txt3>",
-          "properties": {
-            "time_format": "02/01/06 15:04"
-          },
-          "style": "plain",
-          "template": "< #<wallbash_txt1> > · </>{{.CurrentDate | date .Format}}",
-          "type": "time"
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "newline": true,
-      "segments": [
-        {
-          "background": "transparent",
-          "foreground": "#<wallbash_txt3>",
-          "properties": {
-            "folder_icon": "\uf07b",
-            "folder_separator_template": "<#<wallbash_3xa5>> \u00bb </>",
-            "home_icon": "\ueb06",
-            "style": "agnoster"
-          },
-          "style": "plain",
-          "template": "<#<wallbash_3xa5>>\u2514</><#<wallbash_3xa5>>[</> {{.Path}} <#<wallbash_3xa5>>]</>",
-          "type": "path"
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "newline": true,
-      "segments": [
-        {
-          "background": "transparent",
+          "background": "#<wallbash_1xa1>",
           "foreground": "#<wallbash_txt2>",
-          "foreground_templates": [
-            "{{if gt .Code 0}}#ff3030{{end}}"
-          ],
-          "properties": {
-            "always_enabled": true
-          },
-          "style": "plain",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
           "template": "\u276f",
-          "type": "status"
+          "trailing_diamond": "\ue0b4",
+          "type": "text"
         }
-      ]
+      ],
+      "type": "prompt"
     }
   ],
-  "console_title_template": "{{if .Root}}[root] {{end}}{{.Shell}} in <{{.Folder}}>",
   "final_space": true,
   "version": 3
 }

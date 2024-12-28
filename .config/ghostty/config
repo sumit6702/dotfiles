@@ -1,0 +1,18 @@
+keybind = ctrl+z=close_surface
+keybind = ctrl+d=new_split:right
+
+font-family = JetBrainsMono Nerd Font
+font-size = 14
+font-style-bold = 600
+theme = wallbash.conf
+
+shell-integration = fish
+
+mouse-hide-while-typing = true
+
+window-padding-x = 22
+window-padding-y = 22
+
+window-vsync = true
+
+window-decoration = false
