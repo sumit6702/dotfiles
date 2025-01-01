@@ -3,165 +3,46 @@ $HOME/.config/ohmyposh/omp_wallbash.json
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
-      "alignment": "right",
       "segments": [
         {
-          "background": "#<wallbash_1xa1>",
           "foreground": "#<wallbash_txt1>",
-          "leading_diamond": "\ue0b6",
-          "style": "diamond",
-          "template": "{{ .UserName }}",
-          "trailing_diamond": "\ue0b4 ",
-          "type": "session"
-        },
-        {
-          "background": "#<wallbash_1xa1>",
-          "foreground": "#<wallbash_txt2>",
-          "leading_diamond": "\ue0b6",
           "properties": {
-            "style": "folder"
+            "time_format": "15:04:05"
           },
-          "style": "diamond",
-          "template": "\ue5ff {{ .Path }}",
-          "trailing_diamond": "\ue0b4",
-          "type": "path"
-        },
-        {
-          "background": "#<wallbash_1xa1>",
-          "foreground": "#<wallbash_txt1>",
-          "leading_diamond": " \ue0b6",
-          "properties": {
-            "branch_icon": ""
-          },
-          "style": "diamond",
-          "template": "{{ .HEAD }}",
-          "trailing_diamond": "\ue0b4",
-          "type": "git"
-        },
-        {
-          "background": "#<wallbash_1xa1>",
-          "foreground": "#<wallbash_txt2>",
-          "leading_diamond": " \ue0b6",
-          "properties": {
-            "fetch_version": false
-          },
-          "style": "diamond",
-          "template": "\ue235{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
-          "trailing_diamond": "\ue0b4",
-          "type": "python"
-        },
-        {
-          "background": "#<wallbash_1xa1>",
-          "foreground": "#<wallbash_txt3>",
-          "leading_diamond": " \ue0b6",
-          "properties": {
-            "fetch_version": false
-          },
-          "style": "diamond",
-          "template": "\ue626{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "trailing_diamond": "\ue0b4",
-          "type": "go"
-        },
-        {
-          "background": "#<wallbash_1xa1>",
-          "foreground": "#<wallbash_txt2>",
-          "leading_diamond": " \ue0b6",
-          "properties": {
-            "fetch_version": false
-          },
-          "style": "diamond",
-          "template": "\ue718{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
-          "trailing_diamond": "\ue0b4",
-          "type": "node"
-        },
-        {
-          "background": "#<wallbash_1xa1>",
-          "foreground": "#<wallbash_txt1>",
-          "leading_diamond": " \ue0b6",
-          "properties": {
-            "fetch_version": false
-          },
-          "style": "diamond",
-          "template": "\ue791{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "trailing_diamond": "\ue0b4",
-          "type": "ruby"
-        },
-        {
-          "background": "#<wallbash_1xa1>",
-          "foreground": "#<wallbash_txt1>",
-          "leading_diamond": " \ue0b6",
-          "properties": {
-            "fetch_version": false
-          },
-          "style": "diamond",
-          "template": "\ue738{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "trailing_diamond": "\ue0b4",
-          "type": "java"
-        },
-        {
-          "background": "#<wallbash_1xa1>",
-          "foreground": "#<wallbash_txt3>",
-          "leading_diamond": " \ue0b6",
-          "properties": {
-            "fetch_version": false
-          },
-          "style": "diamond",
-          "template": "\ue624{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
-          "trailing_diamond": "\ue0b4",
-          "type": "julia"
-        },
-        {
-          "background": "#<wallbash_1xa1>",
-          "foreground": "#<wallbash_txt3>",
-          "foreground_templates": [
-            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
-            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
-          ],
-          "leading_diamond": " \ue0b6",
-          "properties": {
-            "charged_icon": " ",
-            "charging_icon": "\u21e1 ",
-            "discharging_icon": "\u21e3 "
-          },
-          "style": "diamond",
-          "template": "{{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}",
-          "trailing_diamond": "\ue0b4",
-          "type": "battery"
+          "style": "plain",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "type": "time"
         }
       ],
-      "type": "prompt"
+      "type": "rprompt"
     },
     {
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "background": "#<wallbash_1xa1>",
           "foreground": "#<wallbash_txt1>",
-          "leading_diamond": "\ue0b6",
           "properties": {
-            "style": "austin",
-            "threshold": 150
+            "style": "full"
           },
-          "style": "diamond",
-          "template": "{{ .FormattedMs }}",
-          "trailing_diamond": "\ue0b4 ",
-          "type": "executiontime"
+          "style": "plain",
+          "template": "{{ .Path }} ",
+          "type": "path"
         },
         {
-          "background": "#<wallbash_1xa1>",
-          "foreground": "#<wallbash_txt2>",
-          "leading_diamond": "\ue0b6",
-          "style": "diamond",
-          "template": "\u276f",
-          "trailing_diamond": "\ue0b4",
+          "foreground": "#<wallbash_txt1>",
+          "style": "plain",
+          "template": "{{ .HEAD }} ",
+          "type": "git"
+        },
+        {
+          "foreground": "#<wallbash_txt1>",
+          "style": "plain",
+          "template": "\u276f ",
           "type": "text"
         }
       ],
       "type": "prompt"
     }
   ],
-  "final_space": true,
   "version": 3
 }

@@ -1,4 +1,4 @@
-$HOME/.config/ghostty/themes/wallbash.conf|killall -SIGUSR1 ghostty
+$HOME/.config/ghostty/themes/wallbash.conf
 palette = 0=#<wallbash_2xa1>
 palette = 1=#<wallbash_2xa2>
 palette = 2=#<wallbash_2xa3>
@@ -8,7 +8,7 @@ palette = 5=#<wallbash_2xa6>
 palette = 6=#<wallbash_2xa7>
 palette = 7=#<wallbash_2xa8>
 palette = 8=#<wallbash_2xa9>
-palette = 9=#<wallbash_3xa1>
+palette = 9=#<wallbash_2xa9>
 palette = 10=#<wallbash_3xa2>
 palette = 11=#<wallbash_3xa3>
 palette = 12=#<wallbash_3xa4>
@@ -19,4 +19,4 @@ background = <wallbash_pry1>
 foreground = <wallbash_txt1>
 cursor-color = <wallbash_pry2>
 selection-background = <wallbash_1xa1>
-selection-foreground = <wallbash_txt2>
+selection-foreground = <wallbash_txt1>
