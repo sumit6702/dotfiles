@@ -32,3 +32,7 @@ cd dotfiles
 # Install the script
 ./install.sh
 ```
+
+```bash
+curl -O https://raw.githubusercontent.com/sumit6702/dotfiles/refs/heads/main/gd_switch.sh
+```
