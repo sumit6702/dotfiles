@@ -78,8 +78,23 @@ step3() {
     
     # Configure mkinitcpio
     backup_config "/etc/mkinitcpio.conf"
+    
+    # Update MODULES line
     sudo sed -i 's/^MODULES=.*/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
-    sudo sed -i 's/\(^HOOKS=.*\)kms\(.*\)/\1\2/' /etc/mkinitcpio.conf
+    
+    # Carefully handle the HOOKS line - preserve existing hooks while removing kms if present
+    if grep -q '^HOOKS=' /etc/mkinitcpio.conf; then
+        # Get current HOOKS line
+        CURRENT_HOOKS=$(grep '^HOOKS=' /etc/mkinitcpio.conf)
+        # Remove 'kms' from hooks if present, maintaining the rest of the configuration
+        NEW_HOOKS=$(echo "$CURRENT_HOOKS" | sed 's/\(HOOKS=([^)]*\)kms\([^)]*)\)/\1\2/' | sed 's/  / /g')
+        if [ "$CURRENT_HOOKS" != "$NEW_HOOKS" ]; then
+            sudo sed -i "s|^HOOKS=.*|$NEW_HOOKS|" /etc/mkinitcpio.conf
+        fi
+    else
+        # If no HOOKS line exists, add a default one
+        echo 'HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)' | sudo tee -a /etc/mkinitcpio.conf
+    fi
     
     # Create and configure nvidia hook
     sudo mkdir -p /etc/pacman.d/hooks
