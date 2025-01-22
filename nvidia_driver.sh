@@ -1,76 +1,112 @@
 #!/bin/bash
 
-# Arch Linux NVIDIA Driver Installation Script for GT 710
+# Exit on any error
+set -e
 
-echo "Starting NVIDIA driver installation script for Arch Linux (GT 710)."
+echo "Starting NVIDIA driver installation for GT 710..."
 
-# Step 1: Installing required packages and enabling multilib
-echo "Updating system..."
-sudo pacman -Syu --noconfirm
+# Function to check if running as root
+check_root() {
+    if [ "$EUID" -ne 0 ]; then 
+        echo "Please run as root"
+        exit 1
+    fi
+}
 
-echo "Installing required packages..."
-sudo pacman -S base-devel linux-headers git nano --needed --noconfirm
+# Function to backup configuration files
+backup_config() {
+    local file=$1
+    if [ -f "$file" ]; then
+        cp "$file" "$file.backup.$(date +%Y%m%d_%H%M%S)"
+        echo "Created backup of $file"
+    fi
+}
 
-echo "Installing AUR helper (yay)..."
-cd ~
-if [ ! -d "yay" ]; then
-  git clone https://aur.archlinux.org/yay.git
-fi
-cd yay
-makepkg -si --noconfirm
+# Step 1: System Update and Prerequisites
+step1() {
+    echo "Step 1: Installing prerequisites..."
+    pacman -Syu --noconfirm
+    pacman -S --needed --noconfirm base-devel linux-headers git nano
+    
+    # Install yay if not present
+    if ! command -v yay &> /dev/null; then
+        echo "Installing yay..."
+        cd /tmp
+        git clone https://aur.archlinux.org/yay.git
+        cd yay
+        makepkg -si --noconfirm
+        cd ..
+        rm -rf yay
+    fi
+    
+    # Enable multilib repository
+    if ! grep -q "^\[multilib\]" /etc/pacman.conf; then
+        echo "Enabling multilib repository..."
+        echo -e "\n[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
+        pacman -Sy
+    fi
+}
 
-echo "Enabling multilib repository..."
-sudo sed -i '/multilib/,/^$/s/^#//' /etc/pacman.conf
-yay -Syu --noconfirm
+# Step 2: Install NVIDIA Drivers
+step2() {
+    echo "Step 2: Installing NVIDIA drivers..."
+    yay -S --noconfirm nvidia-470xx-dkms nvidia-470xx-utils lib32-nvidia-470xx-utils nvidia-settings
+}
 
-# Step 2: Installing driver packages
-DRIVER_BASE="nvidia-470xx-dkms"
-OPENGL="nvidia-470xx-utils"
-OPENGL_MULTILIB="lib32-nvidia-470xx-utils"
-
-echo "Installing NVIDIA driver packages..."
-yay -S --noconfirm $DRIVER_BASE $OPENGL $OPENGL_MULTILIB
-
-echo "Installing NVIDIA settings..."
-yay -S --noconfirm nvidia-settings
-
-# Step 3: Enabling DRM kernel mode setting
-echo "Configuring DRM kernel mode setting..."
-
-# Detect if GRUB is installed
-if [ -f /etc/default/grub ]; then
-  echo "Editing GRUB configuration..."
-  sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=".*"/\1 nvidia-drm.modeset=1"/' /etc/default/grub
-  sudo grub-mkconfig -o /boot/grub/grub.cfg
-else
-  echo "GRUB not detected. Skipping GRUB configuration. Please configure your bootloader manually."
-fi
-
-echo "Adding early loading of NVIDIA modules..."
-sudo sed -i 's/MODULES=()/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
-sudo sed -i '/kms/d' /etc/mkinitcpio.conf
-sudo mkinitcpio -P
-
-echo "Adding pacman hook for NVIDIA driver updates..."
-HOOK_PATH="/etc/pacman.d/hooks/"
-HOOK_FILE="$HOOK_PATH/nvidia.hook"
-sudo mkdir -p $HOOK_PATH
-
-cat <<EOL | sudo tee $HOOK_FILE
+# Step 3: Configure DRM kernel mode setting
+step3() {
+    echo "Step 3: Configuring DRM kernel mode setting..."
+    
+    # Configure GRUB
+    if [ -f "/etc/default/grub" ]; then
+        backup_config "/etc/default/grub"
+        if grep -q "^GRUB_CMDLINE_LINUX_DEFAULT=" /etc/default/grub; then
+            # Check kernel version for fbdev parameter requirement
+            if uname -r | grep -q "^6.11"; then
+                sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="\([^"]*\)"/GRUB_CMDLINE_LINUX_DEFAULT="\1 nvidia-drm.modeset=1 nvidia-drm.fbdev=1"/' /etc/default/grub
+            else
+                sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="\([^"]*\)"/GRUB_CMDLINE_LINUX_DEFAULT="\1 nvidia-drm.modeset=1"/' /etc/default/grub
+            fi
+            grub-mkconfig -o /boot/grub/grub.cfg
+        fi
+    fi
+    
+    # Configure mkinitcpio
+    backup_config "/etc/mkinitcpio.conf"
+    sed -i 's/^MODULES=.*/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
+    sed -i 's/\(^HOOKS=.*\)kms\(.*\)/\1\2/' /etc/mkinitcpio.conf
+    
+    # Create and configure nvidia hook
+    mkdir -p /etc/pacman.d/hooks
+    cat > /etc/pacman.d/hooks/nvidia.hook << 'EOL'
 [Trigger]
-Operation = Install
-Operation = Upgrade
-Operation = Remove
-Type = Package
-Target = $DRIVER_BASE
+Operation=Install
+Operation=Upgrade
+Operation=Remove
+Type=Package
+Target=nvidia-470xx-dkms
+Target=linux
 
 [Action]
-Description = Update NVIDIA module in initramfs
-Depends = mkinitcpio
-When = PostTransaction
-Exec = /usr/bin/mkinitcpio -P
+Description=Update NVIDIA module in initcpio
+Depends=mkinitcpio
+When=PostTransaction
+NeedsTargets
+Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /usr/bin/mkinitcpio -P'
 EOL
+    
+    # Regenerate initramfs
+    mkinitcpio -P
+}
 
-# Step 4: Reboot suggestion
-echo "NVIDIA driver installation for GT 710 completed successfully."
-echo "Please reboot your system to apply the changes."
+# Main installation process
+main() {
+    check_root
+    step1
+    step2
+    step3
+    echo "Installation complete! Please reboot your system."
+}
+
+# Run the installation
+main
