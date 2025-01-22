@@ -5,10 +5,15 @@ set -e
 
 echo "Starting NVIDIA driver installation for GT 710..."
 
-# Function to check if running as root
-check_root() {
-    if [ "$EUID" -ne 0 ]; then 
-        echo "Please run as root"
+# Function to check for sudo privileges
+check_sudo() {
+    if [ "$EUID" -eq 0 ]; then
+        echo "Please don't run this script as root directly. Use: sudo ./install-nvidia.sh"
+        exit 1
+    fi
+    
+    if ! sudo -v; then
+        echo "This script requires sudo privileges"
         exit 1
     fi
 }
@@ -17,7 +22,7 @@ check_root() {
 backup_config() {
     local file=$1
     if [ -f "$file" ]; then
-        cp "$file" "$file.backup.$(date +%Y%m%d_%H%M%S)"
+        sudo cp "$file" "$file.backup.$(date +%Y%m%d_%H%M%S)"
         echo "Created backup of $file"
     fi
 }
@@ -25,8 +30,8 @@ backup_config() {
 # Step 1: System Update and Prerequisites
 step1() {
     echo "Step 1: Installing prerequisites..."
-    pacman -Syu --noconfirm
-    pacman -S --needed --noconfirm base-devel linux-headers git nano
+    sudo pacman -Syu --noconfirm
+    sudo pacman -S --needed --noconfirm base-devel linux-headers git nano
     
     # Install yay if not present
     if ! command -v yay &> /dev/null; then
@@ -42,8 +47,8 @@ step1() {
     # Enable multilib repository
     if ! grep -q "^\[multilib\]" /etc/pacman.conf; then
         echo "Enabling multilib repository..."
-        echo -e "\n[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
-        pacman -Sy
+        echo -e "\n[multilib]\nInclude = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacman.conf > /dev/null
+        sudo pacman -Sy
     fi
 }
 
@@ -63,22 +68,22 @@ step3() {
         if grep -q "^GRUB_CMDLINE_LINUX_DEFAULT=" /etc/default/grub; then
             # Check kernel version for fbdev parameter requirement
             if uname -r | grep -q "^6.11"; then
-                sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="\([^"]*\)"/GRUB_CMDLINE_LINUX_DEFAULT="\1 nvidia-drm.modeset=1 nvidia-drm.fbdev=1"/' /etc/default/grub
+                sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="\([^"]*\)"/GRUB_CMDLINE_LINUX_DEFAULT="\1 nvidia-drm.modeset=1 nvidia-drm.fbdev=1"/' /etc/default/grub
             else
-                sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="\([^"]*\)"/GRUB_CMDLINE_LINUX_DEFAULT="\1 nvidia-drm.modeset=1"/' /etc/default/grub
+                sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="\([^"]*\)"/GRUB_CMDLINE_LINUX_DEFAULT="\1 nvidia-drm.modeset=1"/' /etc/default/grub
             fi
-            grub-mkconfig -o /boot/grub/grub.cfg
+            sudo grub-mkconfig -o /boot/grub/grub.cfg
         fi
     fi
     
     # Configure mkinitcpio
     backup_config "/etc/mkinitcpio.conf"
-    sed -i 's/^MODULES=.*/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
-    sed -i 's/\(^HOOKS=.*\)kms\(.*\)/\1\2/' /etc/mkinitcpio.conf
+    sudo sed -i 's/^MODULES=.*/MODULES=(nvidia nvidia_modeset nvidia_uvm nvidia_drm)/' /etc/mkinitcpio.conf
+    sudo sed -i 's/\(^HOOKS=.*\)kms\(.*\)/\1\2/' /etc/mkinitcpio.conf
     
     # Create and configure nvidia hook
-    mkdir -p /etc/pacman.d/hooks
-    cat > /etc/pacman.d/hooks/nvidia.hook << 'EOL'
+    sudo mkdir -p /etc/pacman.d/hooks
+    sudo tee /etc/pacman.d/hooks/nvidia.hook > /dev/null << 'EOL'
 [Trigger]
 Operation=Install
 Operation=Upgrade
@@ -96,12 +101,12 @@ Exec=/bin/sh -c 'while read -r trg; do case $trg in linux) exit 0; esac; done; /
 EOL
     
     # Regenerate initramfs
-    mkinitcpio -P
+    sudo mkinitcpio -P
 }
 
 # Main installation process
 main() {
-    check_root
+    check_sudo
     step1
     step2
     step3
