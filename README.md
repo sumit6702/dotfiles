@@ -103,10 +103,6 @@ Having issues? Check these common fixes:
 3. Verify KittyDOTS symlinks are correct
 4. Check Hyprland logs: `~/.local/share/hyprland/hyprland.log`
 
-## 📝 License
-
-Feel free to use these configs however you like! They're released under the MIT License.
-
 ---
 
 Made with 💜 and too much coffee
