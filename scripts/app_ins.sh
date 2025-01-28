@@ -14,6 +14,8 @@ declare -a offical_packages=(
   "neovim"
   "nodejs"
   "ttf-jetbrains-mono-nerd"
+  "qbittorrent"
+  "jdk21-openjdk"
 )
 
 declare -a aur_packages=(
@@ -21,16 +23,21 @@ declare -a aur_packages=(
   "nvm"
   "zen-browser-bin"
   "materialgram-bin"
-  " visual-studio-code-bin"
+  "visual-studio-code-bin"
+  "stremio"
 )
 
-
+# Check if packages are already installed
 for package in "${offical_packages[@]}"
 do
-  sudo pacman -S $package
+  if ! pacman -Qi $package &> /dev/null; then
+    sudo pacman -S $package
+  fi
 done
 
 for package in "${aur_packages[@]}"
 do
-  yay -S $package
+  if ! pacman -Qi $package &> /dev/null; then
+    yay -S $package
+  fi
 done
