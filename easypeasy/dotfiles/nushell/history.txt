@@ -1,0 +1,1904 @@
+clear
+la
+l
+clear
+ls
+clear
+ls
+clear
+la
+clear
+last
+clear
+fastfe
+fastfetc
+fastfetch
+clear
+ls
+clear
+ls
+clear
+y
+clear
+zoxide
+clear
+rm -rf ~/.config/nvim
+clear
+ls ~/.config/nvim
+clear
+LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
+clear
+exit
+LV_BRANCH='release-1.4/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.4/neovim-0.9/utils/installer/install.sh)
+clear
+exit
+clear
+ls
+clear
+ls
+clear
+ls
+clera
+clear
+exit
+clear
+lsa
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+exit
+clear
+la
+clear
+ls
+clea
+rclear
+clear
+ls
+ls | sort-by size | reverse
+clear
+help ls
+clear
+help lsp
+help
+clear
+curl -s https://api.github.com/repos/nushell/nushell/contributors | jq '.[].login'
+clear
+echo $SHELL
+clear
+4 > 10
+clear
+echo "Hello world!"
+clear
+date now | date to-timezone "Europe/London"
+clear
+date now | date to-timezone "India/Kolkata"
+clear
+which neovim
+clear
+find neovim
+ls neovim
+clear
+$env.config.buffer_editor = "nvim"
+clear
+sudo pacman -S less
+clear
+$env.config.buffer_editor = "nvim"
+clear
+config nu
+clear
+exit
+config nu
+clear
+y
+clear
+yazi
+clear
+exit
+config nu
+clear
+nvim ~/.config/nushell/config.nu
+clear
+nvim ~/.config/fish/config.fish
+clear
+config nu
+clear
+nvim ~/.config/nushell/config.nu
+exit
+clear
+nvim ~/.config/nushell/config.nu
+clear
+exit
+nvim ~/.config/nushell/config.nu
+clear
+exit
+clear
+config nu
+clear
+nvim ~/.config/nushell/config.nu
+clear
+exit
+clear
+nvim ~/.config/nushell/config.nu
+clear
+exit
+nvim ~/.config/nushell/config.nu
+clear
+exit
+nvim ~/.config/nushell/config.nu
+exit
+nvim ~/.config/nushell/config.nu
+exit
+nvim ~/.config/nushell/config.nu
+exit
+nvim ~/.config/nushell/config.nu
+clear
+exit
+nvim ~/.config/nushell/config.nu
+exit
+nvim ~/.config/nushell/config.nu
+exit
+nvim ~/.config/nushell/config.nu
+exit
+nvim ~/.config/nushell/config.nu
+exi
+exit
+nvim ~/.config/nushell/config.nu
+clear
+exit
+clear
+fastfetch
+clear
+fastfetch
+clear
+exit
+clear
+exit
+clear
+Hyde power
+Hyde power on
+Hyde power save on
+clear
+exit
+Hyde power save off
+clear
+exit
+Hyde wallpaper
+Hyde wallpaper set ~/Downloads/windows11_light.jpg
+clear
+Hyde power save
+Hyde power save -o -b
+clear
+clea
+rlcear
+clear
+exit
+clear
+config nu --doc | nu-highlight | less -R
+clear
+$env.config.buffer_editor = 'nvim'
+clear
+~/.config/fish/config.fish | less -R
+clear
+cat ~/.config/fish/config.fish
+config nu
+nvim
+clear
+nvim ~/.config/nvim
+clear
+nvim
+nvim ~/.config/nvim/init.lua
+clare
+clear
+nvim
+clear
+cd ~/.config/nvim
+clear
+l;s
+clear
+ls
+cd config
+clear
+ls
+la
+clear
+ls
+clear
+y
+clear
+yazi
+touch colors.lua
+clear
+la
+clear
+ls
+nvim colors.lua
+ls
+ls lua
+ls lua/config
+nvim lua/config/lazy.lua
+clear
+nvim
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+exit
+clear
+ls
+clear
+cd KittyDOTS/
+cd .local
+cl;ear
+clear
+ls
+cd share
+clear
+ls
+cd wallpapers/
+clear
+ls
+Hyde wallpaper set chinatown.png
+clear
+Hyde reload
+clear
+exit
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+ls
+exit
+clear
+ls
+clear
+cd KittyDOTS/
+clear
+ls
+cd scripts/
+clear
+ls
+clear
+y
+clear
+yazi
+cd ..
+cealr
+clear
+cd .local/share/scripts/
+clear
+ls
+chmod +x grub_secure_boot.sh
+claer
+./grub_secure_boot.sh
+clear
+lsb
+lsblk
+sudo ./grub_secure_boot.sh
+clear
+exit
+clear
+reboot
+cd KittyDOTS/.local/share/scripts/
+clear
+sudo ./grub_secure_boot.sh
+reboot
+cd KittyDOTS/.local/share/wallpapers/
+Hyde wallpaper set chinatown.png
+clear
+exit
+cd KittyDOTS/.local/share/wallpapers/
+Hyde wallpaper set chinatown.png
+exit
+clear
+exit
+sudo pacman -S android-tools
+clear
+adb devices
+v;rst
+clear
+adb uninstall com.google.android.apps.youtube
+adb shell list packages
+adb shell pm list packages
+adb shell pm list packages | grep 'music'
+adb shell pm uninstall com.google.android.apps.youtube.music
+adb shell uninstall com.google.android.apps.youtube.music
+adb shell pm uninstall -k com.google.android.apps.youtube.music
+adb shell pm disable com.google.android.apps.youtube.music
+clear
+adb shell pm uninstall --user 0 com.google.android.apps.youtube.music
+adb shell pm list packages | grep 'meet'
+adb shell pm list packages | grep 'tachyon'
+adb shell pm uninstall --user 0 com.google.android.apps.tachyon
+adb shell pm uninstall --user 0 com.google.android.vidoes
+adb shell pm uninstall --user 0 com.google.android.videos
+adb shell pm list packages | grep 'safetyhub'
+adb shell pm uninstall --user 0 com.google.android.apps.safetyhub
+clear
+adb shell pm list packages | grep 'googleone'
+adb shell pm uninstall --user 0 com.google.android.apps.subscriptions.red
+adb shell pm uninstall --user 0 com.google.android.apps.messaging
+adb shell pm uninstall --user 0 com.xiaomi.glgm
+adb shell pm uninstall --user 0 com.android.stk
+adb shell pm uninstall --user 0 com.xiaomi.mipicks
+adb shell pm uninstall --user 0 com.miui.miservice
+exit
+cd KittyDOTS/.local/share/wallpapers/
+Hyde wallpaper set chinatown.png
+clear
+exit
+ckear
+clear
+exit
+sudo pacman -S google-chrome
+clkear
+clear
+exit
+cd KittyDOTS/.local/share/wallpapers/
+Hyde wallpaper set chinatown.png
+clear
+cd ~/.config/nushell/
+clear
+ls
+clear
+ls
+touch nuconfig.nu
+clear
+ls
+nvim config.nu
+nvim
+clear
+nvim ~/.config/nvim/init.lua
+nvim ~/.config/nvim/lua/config/options.lua
+nvim ~/.config/nvim/lua/config/lazy.lua
+cl;ear
+clear
+exit
+nvim config.nu
+nvim
+nvim ~/.config/nvim/init.lua
+nvim ~/.config/nvim/lua/config/lazy.lua
+nvim config.nu
+clear
+exit
+clear
+nvim config.nu
+config nu
+cd ~/.config/nushell/
+nvim config.nu
+source ~/.config/nushell/config.nu
+config nu
+source ~/.config/nushell/config.nu
+clear
+p
+clear
+cd
+clear
+source ~/.config/nushell/config.nu
+clear
+la
+clear
+la
+clear
+ls
+clear
+sshpc
+clear
+p
+cear
+clear
+cd
+clear
+source ~/.config/nushell/config.nu
+clear
+la
+clear
+ls
+clear
+p
+clear
+cd
+clear
+ls
+clear
+source ~/.config/nushell/config.nu
+ll
+clear
+l
+celar
+clear
+ll
+source ~/.config/nushell/config.nu
+clear
+ll
+clear
+ll
+clear
+ll
+clear
+ll
+clear
+ll
+clear
+ll
+clear
+source ~/.config/nushell/config.nu
+ls
+clear
+la
+clear
+ls
+clear
+exit
+la
+clear
+la
+clear
+exxit
+exit
+source ~/.config/nushell/config.nu
+ls
+clear
+la
+clear
+la
+clear
+la
+clear
+ls
+clear
+ls
+clear
+la
+clear
+sshpc
+clear
+source ~/.config/nushell/config.nu
+clear
+exit
+clear
+echo $($env.HOME)
+echo $("$env.HOME")
+echo $"($env.HOME)"
+clear
+mkd
+clear
+y
+clear
+y
+clear
+y
+clear
+ls
+clear
+ls
+clear
+y
+cl;ear
+clear
+cd
+clear
+$nu.env-path
+clear
+zoxide init nushell | save -f ~/.zoxide.nu
+clear
+zoxide
+clear
+oh-my-posh init nu
+clear
+ls
+clear
+la
+cl;ear
+clear
+celar
+clear
+nvim ~/.oh-my-posh.nu
+oh-my-posh init nu --config ~/.config/ohmyposh/omp_wallbash.json
+clear
+exit
+clear
+nvim ~/.oh-my-posh.nu
+ckear
+clear
+exit
+clear
+ls
+clear
+la
+clear
+la
+clear
+la
+clear
+la
+clear
+la
+clear
+la
+clear
+la
+clear
+la
+clear
+eval "$(homebrew/bin/brew shellenv)"
+clear
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+clear
+bash
+clear
+excit
+exit
+clear
+bash
+exit
+/bin/bash -c "(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+clear
+bash -c (curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | str trim)
+echo >> /home/sumit/.profile<\n>    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/sumit/.profile<\n>    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+clear
+/home/linuxbrew/.linuxbrew/bin/brew shellenv | save -f ~/.config/nushell/brew.nu<\n>source ~/.config/nushell/brew.nu<\n>
+clear
+/home/linuxbrew/.linuxbrew/bin/brew shellenv | save -f ~/.config/nushell/brew.nu
+cklear
+clear
+cd ~/.config/nushell/
+clear
+ls
+nvim brew.nu
+/home/linuxbrew/.linuxbrew/bin/brew shellenv<\n>
+nvim brew.nu
+clear
+nvim brew.nu
+clear
+cd ~/.config/nushell/
+clear
+brew
+clear
+exit
+nvim brew.nu
+clear
+cear
+clear
+exit
+zoxide init nushell | save -f ~/.config/nushell/zoxide.nu
+oh-my-posh init nu --config ~/.config/ohmyposh/omp_wallbash.json | save -f ~/.config/nushell/oh-my-posh.nu
+clear
+exit
+clear
+cd ~/.config/nushell/
+clear
+ls
+clear
+exit
+rm -rf ~/.oh-my-posh.nu ~/.zoxide.nu
+clear
+exit
+clear
+y
+clear
+c
+clear
+fastfetch
+clear
+exit
+ff
+clear
+ff
+clear
+c
+clear
+f
+clear
+ff
+c
+ff
+clear
+ff
+c
+ff
+c
+ff
+c
+clear
+exit
+btop
+c
+exit
+sudo pacman -S thefuck
+clear
+nvvim
+fuck
+thefuck --alias | save -f ~/.config/nushell/thefuck.nu
+clear
+cd ~/.config/nushell/
+clear
+ls
+cat thefuck.nu
+clear
+nvim nuconfig.nu
+clear
+cd ~/.config/nushell/
+c
+nckear
+nvim thefuck.nu
+nvimm
+fuck
+cd ~/.config/nushell/
+nvim thefuck.nu
+nvim nuconfig.nu
+clear
+nvim nuconfig.nu
+nvimm
+fuck
+clear
+nvimm
+fuck
+nvimmm=
+fuck
+nvimm
+fuck
+clea
+rexit
+exit
+clar
+clear
+claer
+clear
+exit
+c
+clear
+exit
+Hyde upgrade
+Hyde update
+Hyde upgrade
+clear
+Hyde update
+clear
+echo $SHELL
+echo $env.SHELL
+clear
+exit
+clear
+Hyde theme import
+clear
+ls
+clear
+la
+clear
+la
+clear
+l;s
+clear
+ls
+clkear
+clear
+ls
+clear
+Hyde theme import
+exit
+clear
+ls
+clear
+ls
+clear
+ls
+clear
+la
+clear
+la
+clear
+ll
+clear
+exit
+clear
+exit
+la
+clear
+exit
+clear
+exit
+clear
+exit
+ckear
+c
+exit
+clear
+exit
+clear
+exit
+clear
+exit
+clear
+exit
+yi anytype-bin 
+clear
+yi
+clear
+cat ~/.config/nushell/nuconfig.nu
+clear
+ys anytype-bin 
+clkear
+eclear
+clkear
+ckear
+clea
+c
+exit
+clear
+exit
+clear
+exit
+clear
+exit
+clear
+wol 
+clear
+cat ~/.config/fish/config.fish
+clear
+cat ~/.config/nushell/nuconfig.nu
+clear
+sshon
+cat ~/.config/fish/config.fish
+cat ~/.config/nushell/nuconfig.nu
+config nu
+nvim ~/.config/nushell/nuconfig.nu
+c;ear
+clear
+exit
+sshon
+clear
+exit
+clear
+exit
+clear
+p
+clear
+ls
+gh repo clone sumit6702/challenges
+clear
+kls
+clear
+ls
+clear
+ls
+clear
+ls
+cd challenges
+clear
+ls
+clear
+exit
+clear
+config nu --doc | nu-highlight > nushelldoc.txt
+config nu --doc | nu-highlight | > nushelldoc.txt
+config nu --doc | nu-highlight | nushelldoc.txt
+config nu --doc | nu-highlight > nushelldoc.txt
+clear
+config nu --doc | save nushelldoc.txt
+rm -rf nushelldoc.txt
+clear
+config nu --doc | save nushelldoc.txt
+clear
+exit
+clear
+fastfetch
+clear
+ls
+clear
+la
+clear
+ll
+clear
+ll
+clear
+exit
+config nu
+nvim nushelldoc.txt
+clear
+exit
+clear
+nvim ~/.config/nvim
+clear
+nvim ~/.config/nvim
+clear
+nvim ~/.config/nvim
+nvim ~/.config/nvim/lua/config/lazy.lua
+nvim ~/.config/nvim/lua/plugins/transparent.nvim
+clear
+nvim ~/.config/nvim/lua/plugins/transparent.nvim
+exxxit
+exit
+code ~/.config/nvim
+cd ~/.config/nvim
+rm -rf git.init
+clear
+ls
+clear
+la
+rm -rf .git
+clear
+exit
+nvim nushelldoc.txt
+config nu
+clear
+exit
+clear
+exxxit
+exit
+config nu
+clear
+exit
+clear
+exit
+nvim nushelldoc.txt
+clear
+exit
+clear
+exit
+clear
+exit
+clear
+nvim nushelldoc.txt
+clear
+mv nushelldoc.txt nushelldoc.nu
+clear
+nvim nushelldoc.nu
+clear
+clea
+rclear
+lcea
+rlcea
+rlce
+clear
+ff
+clear
+ff
+clear
+exit
+clear
+cat ~/.config/hypr/monitors.conf
+clear
+clearr
+clear
+ckear
+clear
+exit
+clear
+cd ~/Downloads/
+clear
+ls
+nvim `bonjourr-20.4.2 2025-02-21 10_08_58.json`
+clear
+exit
+nvim `bonjourr-20.4.2 2025-02-21 10_08_58.json`
+cd ~/Downloads/
+nvim `bonjourr-20.4.2 2025-02-21 10_08_58.json`
+clear
+cd
+clear
+exioot
+exit
+fish
+clear
+ls
+nvimm
+clear
+nvimm
+fuck
+clear
+exit
+fish
+exit
+ckear
+clear
+exit
+cd ~/Downloads/
+nvim `bonjourr-20.4.2 2025-02-21 10_08_58.json`
+clear
+claer
+clear
+exit
+clear
+p
+clear
+ls
+clear
+mkddotmanagerv2
+mkd dotmanagerv2
+nvim ~/.config/nushell/nuconfig.nu
+mkdir -j
+mkdir -h
+clear
+nvim ~/.config/nushell/nuconfig.nu
+clear
+p
+clear
+mkdir dotmanagerv2
+clear
+ls
+clear
+cd dotmanagerv2/
+clear
+ls
+clear
+zoxide
+clear
+zoxide
+clear
+zoxide
+clear
+nvim ~/.config/nushell/nuconfig.nu
+nvim ~/.config/nushell/zoxide.nu
+zoxide init --cmd cd nushell | save -f ~/.config/nushell/zoxide.nu
+clear
+nvim ~/.config/nushell/zoxide.nu
+clear
+cd dotmanagerv2/
+clear
+cear
+clear
+p
+clear
+cd dotmanagerv2/
+c;ear
+cl;ear
+clear
+ls
+clear
+ls
+cd ..
+celear
+clear
+ls
+gh repo clone sumit6702/dotfiles
+hyprctl clients
+clear
+pkill com.gabm.satty
+pkill -15 com.gabm.satty
+hyprctl clients
+pkill com.gabm.satty
+pkill satty
+clear
+exit
+clear
+hyprctl clients
+clear
+cler
+clear
+lazy docker
+clear
+lazy docker
+clear
+exit
+p
+clear
+ls
+cd dotmanagerv2/
+clear
+ls
+clear
+python 
+clear
+py
+clear
+nvim ~/.config/nushell/nuconfig.nu
+p
+clear
+cd dotmanagerv2/
+clear
+py -m venv env
+clear
+ls
+source env/bin/activate
+clear
+source env/bin/activate
+clear
+bash -c "source env/bin/activate"
+clear
+ls
+bash -c "pip install textual"
+vash
+clear
+p
+clear
+ls
+cd dotmanagerv2/
+clear
+ls
+py main.py
+clearclear
+clear
+py main.py
+bash
+clear
+pip install textual
+c;ear
+cear
+c;ear
+clear
+pip install textual
+pipx install textual
+c;ear
+clear
+sudo pacman -S textual
+clear
+c;ear
+clear
+exit
+clear
+mkdir temps
+clear
+cd temps
+clera
+clear
+ls
+cd 
+clear
+rm -rf ~/temps/
+clear
+ls
+c;ear
+clear
+cd /
+clear
+ls
+cd tmp
+clera
+clear
+ls
+c;ear
+mkdir textual_learn
+clear
+cd textual_learn
+clear
+python -m venv env
+clear
+ls
+cl;ear
+clear
+python -m venv venv --nucleus
+rm -rf env
+python -m venv env --nucleus
+clear
+python -m venv env
+clear
+ls
+overlay use source env/bin/activate
+overlay use "source env/bin/activate"
+overlay "source env/bin/activate"
+overlay source env/bin/activate
+clear
+ls
+cl;ear
+clear
+overlay new python_env {<\n>    let env.PATH = $"(env/bin | path expand):($env.PATH)"<\n>    let env.VIRTUAL_ENV = (pwd | path join "env")<\n>}<\n>
+clear
+overlay new python_env enter {<\n>    let-env PATH = $"(pwd)/env/bin:($env.PATH)"<\n>    let-env VIRTUAL_ENV = $"(pwd)/env"<\n>}<\n>
+cl;ear
+clear
+touch env.nu
+clear
+code .
+use env.nu
+clear
+use env.nu
+source env/bin/activate.nu
+bash
+exit
+clear
+ls
+clear
+source env/bin/activate.nu
+overlay env/bin/activate.nu
+overlay
+overlay use env/bin/activate.nu
+clear
+overlay use env/bin/activate.nu
+overlay use source env/bin/activate.nu
+overlay use `source env/bin/activate.nu`
+clear
+overlay
+overlay list
+clear
+pip install textual
+clear
+p
+cd dotmanagerv2/
+clear
+code .
+y
+c;ear
+clear
+cd ~/projects/dotmanagerv2/
+clear
+cd ~/Downloads/
+clear
+ls
+clea
+clear
+ls
+Hyde wallpaper set chinese-hills.jpg
+clear
+exit
+clear
+nvim ~/.config/hypr/userprefs.conf
+clear
+exit
+y
+ls
+cd
+clear
+ls
+cd /
+clear
+ls
+ls home
+clear
+cd /tmp
+clear
+mkdir dotmg
+cd dotmg
+clear
+code .
+clear
+curl -fsSL https://deno.land/install.sh | sh
+rm -rf /tmp/*
+sudo rm -rf /tmp/*
+clear
+exit
+cat ~/.config/hypr/monitors.conf
+cp ~/.config/hypr/monitors.conf ~/.config/hypr/monitors.conf.bak
+clear
+ls ~/.config/hypr/monitors.conf
+ls ~/.config/hypr/monitors.conf.bak
+clear
+exit
+cd ~/Downloads/
+Hyde wallpaper set chinese-hills.jpg
+cd ~/Downloads Hyde wallpaper set chinese-hills.jpg
+cd ~/Downloads && Hyde wallpaper set chinese-hills.jpg
+cd ~/Downloads and Hyde wallpaper set chinese-hills.jpg
+cd ~/Downloads ; Hyde wallpaper set chinese-hills.jpg
+clear
+exit
+clear
+ff
+clear
+exit
+clear
+exit
+cat ~/.config/fish/config.fish
+clear
+cat ~/.config/nushell/nuconfig.nu
+clear
+ys blender
+clear
+sudo pacman -Syyu
+clear
+sudo reflector --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
+sudo pacman -S reflector
+sudo reflector --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
+clear
+sudo reflector --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
+clear
+ys blender
+clear
+exit
+hyprctl clients
+clear
+nvim ~/.config/hypr/userprefs.conf
+clear
+sshpc
+clear
+exit
+clear
+clea
+clear
+exit
+clear
+exit
+q
+exit
+nvim ~/.config/hypr/userprefs.conf
+clear
+exit
+p
+clear
+ls
+clear
+cd dotmanagerv2/
+clear
+ls
+clear
+code ,
+code .
+nvim ~/.config/hypr/userprefs.conf
+clear
+exit
+fish
+clear
+rm -rf ~/projects/dotmanagerv2/
+clear
+exit
+pipx
+clear
+pipx install rich
+clear
+rich
+clear
+python -m pip install rich
+sudo pacman -S rich
+pipx install rich
+clear
+pip install rich
+clear
+pip3 install pytermgui
+clear
+pip install pytermgui
+pipx install pytermgui
+pytermgui
+clear
+p
+clear
+ls
+clear
+mkdir dotmanagerv2
+clear
+rm -rf dotmanagerv2
+clear
+ls
+rm -rf dotfiles
+clear
+ls
+clear
+mkdir easydots
+cler
+clera
+clear
+ls
+clear
+cd easydots/
+clear
+ls
+clear
+pacman -S python-virtualenv
+sudo pacman -S python-virtualenv
+clear
+python -m venv env
+code .
+clear
+rm -rf env
+clear
+python -m virtualenv env
+clear
+source env/bin/activate.nu
+clear
+overlay use env/bin/activate.nu
+clear
+pip install pytermgui
+ckear
+clear
+p ; cd easydots
+clear
+ls
+clear
+overlay use env/bin/activate.nu
+clear
+ls
+clear
+py easydots.py
+clear
+py easydots.py
+clear
+py easydots.py
+clear
+py easydots.py
+c;ear
+clear
+pip uninstall pytermgui
+clear
+pip install typer
+clear
+py easydots.py
+cler
+clear
+py easydots.py
+pip install rich
+pipx uninstall rich
+clear
+sudo pacman -Rns rich
+clear
+pip install rich
+clear
+pip install typer
+clear
+clear
+p ; cd easydots
+clear
+overlay use env/bin/activate.nu
+clear
+pip install typer
+rm -rf env
+python -m virtualenv env
+clear
+pipx install typer rich
+clear
+pip freeze > requirement.txt
+pip freeze in requirement.txt
+exit
+fish
+clear
+pip freeze on requirement.txt
+clear
+pip freeze into requirement.txt
+cklear
+clear
+overlay use env/bin/activate.nu
+cclear
+clear
+p ; cd easydots
+clear
+overlay use env/bin/activate.nu
+clear
+pip freeze on requirement.txt
+pip freeze into requirement.txt
+pip freeze requirement.txt
+clear
+pip freeze
+pip install typer
+p ; cd easydots
+c;ear
+clear
+overlay use env/bin/activate.nu
+clear
+py easydots.py
+clear
+py easydots.py
+clear
+py easydots.py
+py easydots.py sumitk
+py easydots.py rick
+clear
+py easydots.py rick
+c;ear
+clear
+py easydots.py
+pip install yaml
+pip install yaml --latest
+pip install yaml
+pip install pyyaml
+ckear
+clear
+py easydots.py
+clear
+python easydots.py list
+clear
+python easydots.py add nvim ~/dotfiles/nvim ~/.config/nvim
+y
+mkdir dotfiles
+clear
+cp -r ~/.config/nvim/ ~/dotfiles/
+clear
+cd dotfiles/
+clear
+ls
+y
+cp -r mpv ~/dotfiles/
+ls ~/dotfiles/
+python easydots.py add mpv ~/dotfiles/mpv ~/.config/mpv
+clear
+py easydots.py link mpv
+py easydots.py link --name mpv
+clear
+y
+clear
+c;ear
+lewar
+clear
+py easydots.py --help
+py easydots.py --link --help
+py easydots.py link --help
+py easydots.py link --name nvim
+ckear
+clear
+t
+clear
+y
+py easydots.py link --name nvim
+clear
+c;lear
+clear
+clea
+rlcea
+rclea
+rlcea
+rlce
+arclear
+cler
+clear
+clear
+cd KittyDOTS/.config/
+clear
+ls
+cd KittyDOTS/.config/
+clear
+cp -r ghostty fastfetch btop alacritty ohmyposh yazi zed ~/dotfiles/
+clear
+ls ~/dotfiles/
+clear
+ll
+clear
+la
+clear
+la
+clear
+ls
+clear
+ls
+clear
+ls ~/dotfiles/
+clear
+y
+clear
+ls
+cp -r ~/KittyDOTS/.config/hyprpanel ~/dotfiles/
+clear
+ls
+clear
+cp -r ~/KittyDOTS/.config/fish ~/dotfiles/
+clear
+ls
+python easydots.py add btop ~/dotfiles/btop ~/.config/btop
+clear
+cd ~/dotfiles/clear
+cd ~/dotfiles/
+clear
+ls
+py easydots.py list
+lear
+clear
+py easydots.py list
+clear
+py easydots.py
+py easydots.py unlink
+clear
+y
+clear
+clear
+py easydots.py link
+clear
+y
+clear
+nvim
+clear
+py easydots.py link
+clear
+py easydots.py link
+py easydots.py unlink -n zed
+clear
+py easydots.py unlink --name zed
+py easydots.py list
+clear
+py easydots.py list
+clear
+py easydots.py list
+clear
+py easydots.py list
+py easydots.py unlink --name zed
+py easydots.py unlink\
+clear
+py easydots.py unlink
+py easydots.py unlink -n zed
+py easydots.py list
+py easydots.py unlink -n yazi
+clear
+py easydots.py list
+clear
+py easydots.py unlink --help
+py easydots.py unlink --name zed
+clear
+py easydots.py list
+clear
+ls -l ~/.config/zed
+ls -l ~/.config/zed/
+py easydots.py unlink --name zed
+py easydots.py list
+clear
+py easydots.py unlink --name zed
+cl;ear
+clear
+py easydots.py unlink --name zed
+py easydots.py link --name zed
+py easydots.py list
+py easydots.py unlink --name mpv
+clear
+py easydots.py link --name mpv
+py easydots.py link --name zed
+y
+clear
+pip list --format=freeze | save requirements.txt
+pip list --format=freeze | save requirements.txt -f
+py easydots.py list
+clear
+py easydots.py list
+clear
+py easydots.py link --name nushell
+clear
+py easydots.py list
+clear
+cd
+clear
+ls
+cklear
+clear
+ls
+clear
+py easydots.py list
+cd p ; cd easydots ; py easydots.py list
+clear
+overlay use env/bin/activate.nu
+clear
+py easydots.py list
+clear
+cler
+cklear
+clear
+clear
+sudo pacman -S nuitka
+pip install nuikta
+pipx install nuikta
+clear
+nuikta
+clear
+nuitka
+clear
+pipx install nuikta
+pip install nuitka
+clear
+nuitka -m easydots.py
+nuitka
+clear
+nuikta
+nuitka -m --follow-imports easydots.py
+nuitka --follow-imports easydots.py
+eixt
+p ; cd easydots
+clear
+chmod -x easydots.bin
+clear
+./easydots.bin
+chmod -X easydots.bin
+clear
+./easydots.bin
+chmod +x easydots.bin
+./easydots.bin
+./easydots.bin list
+clear
+./easydots.bin list
+clear
+./easydots.bin list
+clear
+./easydots.bin list
+cklear
+clear
+./easydots.bin list
+clear
+./easydots.bin list
+clear
+ls
+clear
+clea
+rlcea
+rlcear
+clear
+clea
+rclea
+rlcea
+cler
+clear
+clea
+rclear
+clear
+clea
+clear
+cklear
+clear
+clea
+rclea
+rlcea
+rlce
+arlc
+clear
+rm -rf easydots.build easydots.bin
+clear
+ls
+clear
+clear
+py easydots.py list
+c;ear
+clear
+c;lear
+lear
+clear
+ls
+mkdir scripts
+clear
+ls
+cd KittyDOTS/.local/share/scripts/
+clear
+ls
+cp -r grub_secure_boot.sh hypr-session.sh hyprland-firefox.sh zen-restart.sh ~/scripts/
+clear
+ls
+clear
+cd
+clear
+commandline set-cursor 
+cd scripts/
+clear
+ls
+clear
+ls
+cat hyprland-firefox.sh
+rm -rf hyprland-firefox.sh
+clear
+ls
+p ; cd easydots
+overlay use env/bin/activate.nu
+clear
+py easyscripts.py
+py easyscripts.py list
+py easyscripts.py listclear
+clear
+py easyscripts.py list
+clear
+py easyscripts.py list
+clear
+py easyscripts.py list
+clear
+py easyscripts.py list
+clear
+py easyscripts.py list
+clear
+py easyscripts.py list
+py easyscripts.py run ZenRestart
+ls /home/sumit/scripts/zen_restart.sh
+ls -l /home/sumit/scripts/zen_restart.sh
+clear
+y
+ls -l /home/sumit/scripts/zen-restart.sh
+ls -l /home/sumit/scripts/
+py easyscripts.py run ZenRestart
+clear
+clea
+rlcea
+rclear
+clear
+pip install prompt_toolkit
+clear
+py easyscripts.py run
+clear
+py easyscripts.py run
+py easyscripts.py run 2
+py easyscripts.py run
+clear
+py easyscripts.py run
+clear
+py easyscripts.py run
+clear
+pip uninstall prompt_toolkit
+clear
+mkdir easypeasy
+clear
+mv -r ~/dotfiles ~/scripts
+python easydots.py link -a
+clear
+c
+clear
+ff
+clear
+ff
+clear
+ff
+clear
+ff
+clear
+exit
+clear
+p ; cd easydots
+clear
+ls
+code .
+clear
+nvim ~/.config/hypr/userprefs.conf
+cd
+clear
+cd easypeasy/dotfiles/
+clear
+ls
+nvim userprefs.conf
+clear
+ls
+clkear
+clear
+overlay use /home/sumit/projects/easydots/env/bin/activate.nu
+clear
+exit
+overlay use /home/sumit/projects/easydots/env/bin/activate.nu
+clear
+python easydots.py list
+py easydots.py link --name HyprUserPref
+clear
+exit
+clear
+overlay use /home/sumit/projects/easydots/env/bin/activate.nu
+ls /sys/class/drm/ | grep "card[0-9]-"
+clear
+ls /sys/class/drm/ | grep "card[0-9]-"
+hyprctl monitors
+wlr-randr\
+wlr-randr
+clear
+sudo pacman -S wlr-randr
+clear
+wlr-randr
+clear
+wlr-randr | awk '{print $1}'
+clear
+wlr-randr | awk '/^[^ ]+-[0-9]+$/ {print $1}'
+clear
+wlr-randr | grep -E '^[^ ]+-[0-9]+'
+cler
+clear
+wlr-randr | awk -F '[()]' '/^[^ ]+-[0-9]+/ {print $2}'
+cat ~/.config/hypr/monitors.conf
+clear
+wlr-randr | grep 'HDMI-A-1'
+c;lear
+clear
+cd easypeasy/scripts/
+clear
+nvim auto-monitors.sh
+nvim auto-monitors.py
+chmod +x auto-monitors.py
+./auto-monitors.py
+python auto-monitors.py
+clear
+nvim auto-monitors.py
+python auto-monitors.py
+clear
+python auto-monitors.py
+nvim auto-monitors.py
+python auto-monitors.py
+nvim auto-monitors.py
+python auto-monitors.py
+nvim auto-monitors.py
+clear
+python auto-monitors.py
+nvim auto-monitors.py
+nvim ~/.config/hypr/userprefs.conf
+cd easypeasy/scripts/
+python auto-monitors.py
+nvim auto-monitors.py
+clear
+exit
+cat ~/.config/hypr/monitors.conf
+btop
+clear
+exit
+udevadm monitor --property | grep -i hdmi
+udevadm monitor --property | grep -i eDP-1
+udevadm monitor --property | grep -i hdmi
+nvim ~/.config/hypr/userprefs.conf
+udevadm monitor --property | grep -i HDMI
+udevadm monitor --property
+udevadm monitor
+sudo nvim /etc/udev/rules.d/95-monitor-hotplug.rules
+sudo nvim /etc/systemd/system/hotplig-monitor.service
+echo $HYPRLAND_INSTANCE_SIGNATURE
+echo $env.HYPRLAND_INSTANCE_SIGNATURE
+sudo nvim /usr/local/bin/hotplug-monitor.sh
+mv /etc/systemd/system/hotplig-monitor.service /etc/systemd/system/hotplug-monitor.service
+sudo mv /etc/systemd/system/hotplig-monitor.service /etc/systemd/system/hotplug-monitor.service
+clear
+sudo chmod +x /usr/local/bin/hotplug-monitor.sh
+sudo udevadm control --reload-rules
+journalctl -u hotplug-monitor.service -f
+clear
+sudo nvim /usr/local/bin/hotplug-monitor.sh
+sudo udevadm control --reload-rules
+journalctl -u hotplug-monitor.service -f
+/usr/local/bin/hotplug-monitor.sh
+sudo nvim /usr/local/bin/hotplug-monitor.sh
+sudo nvim /etc/systemd/system/hotplig-monitor.service
+sudo nvim /etc/systemd/system/hotplug-monitor.service
+sudo systemctl daemon-reload
+sudo systemctl enable --now hotplug-monitor.service
+sudo udevadm control --reload-rules
+journalctl -u hotplug-monitor.service -f
+/usr/local/bin/hotplug-monitor.sh
+clear
+sudo nvim /etc/systemd/system/hotplug-monitor.service
+sudo nvim /usr/local/bin/hotplug-monitor.sh
+sudo systemctl daemon-reload<\n>sudo systemctl restart hotplug-monitor.service
+clear
+journalctl -u hotplug-monitor.service -f
+cat ~/.config/hypr/monitors.conf
+journalctl -u hotplug-monitor.service -f
+journalctl -xeu hotplug-monitor.service
+echo $env.HYPRLAND_INSTANCE_SIGNATURE<\n>
+sudo nvim /etc/systemd/system/hotplug-monitor.service
+sudo systemctl daemon-reload
+sudo systemctl restart hotplug-monitor.service
+sudo systemctl stop hotplug-monitor.service
+sudo rm -rf /etc/udev/rules.d/95-monitor-hotplug.rules
+sudo rm -rf /etc/systemd/system/hotplug-monitor.service
+sudo rm -rf /usr/local/bin/hotplug-monitor.sh
+clear
+nvim ~/.config/hypr/userprefs.conf
+clear
+y
+clear
+y
+cd
+clear
+p ; cd easydots
+clear
+ls
+git init
+clear
+ls
+ll
+clear
+ls
+la
+touch .gitignore
+clear
+ls
+code .
+p ; cd easydots
+cd ..
+git clone https://github.com/sumit6702/easymanager.git
+cp ./easydots/* easymanager/
+cp -r ./easydots/* easymanager/
+clear
+cd easymanager/
+code .
+git add README.md
+touch README.md
+ls
+la
+clear
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sumit6702/easymanager.git
+git push -u origin main
+git pull main
+git pull
+clear
+git add .
+git commit -m "New Script Added"
+clear
+git push -u origin main
+clear
+exit
+p
+clear
+gh repo clone sumit6702/dotfiles
+clear
+ls
+cd dotfiles/
+code .
