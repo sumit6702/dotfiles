@@ -1,4 +1,3 @@
 [submodule "easymanager"]
 	path = easymanager
 	url = https://github.com/sumit6702/easymanager
-	ignore = dirty
