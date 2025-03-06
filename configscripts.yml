@@ -1,0 +1,12 @@
+- name: ZenRestart
+  source: /home/sumit/dotfiles/scripts/zen-restart.sh
+  status: Executed
+- name: HyprSession
+  source: /home/sumit/dotfiles/scripts/hypr-session.sh
+  status: Executed
+- name: GrubSecureBoot
+  source: /home/sumit/dotfiles/scripts/grub-secureboot.sh
+- name: AutoMonitor
+  source: /home/sumit/dotfiles/scripts/auto-monitor.py
+- name: BrowserOzone
+  source: /home/sumit/dotfiles/scripts/browser-ozone.sh
