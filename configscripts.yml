@@ -9,4 +9,4 @@
 - name: AutoMonitor
   source: /home/sumit/dotfiles/scripts/auto-monitor.py
 - name: BrowserOzone
-  source: /home/sumit/dotfiles/scripts/browser-ozone.sh
+  source: /home/sumit/dotfiles/scripts/browser-ozone.py

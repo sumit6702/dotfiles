@@ -1,4 +1,6 @@
 import os
+import sys
+import subprocess
 
 location = "/usr/share/applications"
 ozone_layer = "--ozone-platform=wayland"
@@ -7,6 +9,13 @@ browser_desktops = [
     "microsoft-edge.desktop",
     "brave-browser.desktop",
 ]
+
+
+def check_sudo():
+    if os.geteuid() != 0:
+        print("This script requires sudo privileges. Re-running with sudo...")
+        subprocess.run(["sudo", "python3"] + sys.argv)
+        sys.exit()
 
 
 def file_exists(file_location):
@@ -35,6 +44,8 @@ def check_ozone(file_location):
     print(f"File '{file_location}' modified successfully.")
 
 
-for browser_desktop in browser_desktops:
-    file_location = os.path.join(location, browser_desktop)
-    file_exists(file_location)
+if __name__ == "__main__":
+    check_sudo()
+    for browser_desktop in browser_desktops:
+        file_location = os.path.join(location, browser_desktop)
+        file_exists(file_location)
