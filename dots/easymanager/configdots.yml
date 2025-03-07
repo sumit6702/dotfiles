@@ -50,3 +50,7 @@
   source: /home/sumit/dotfiles/dots/userprefs.conf
   status: Linked
   target: /home/sumit/.config/hypr/userprefs.conf
+- name: HydeWallbash
+  source: /home/sumit/dotfiles/dots/hydewallbash/*
+  status: Linked
+  target: /home/sumit/.config/hyde/wallbash/always
