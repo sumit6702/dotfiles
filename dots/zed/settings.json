@@ -28,5 +28,5 @@
     "metrics": false
   },
   "soft_wrap": "editor_width",
-  "vim_mode": true
+  //"vim_mode": true
 }

@@ -1,0 +1,55 @@
+ERROR: 2025-03-07 20:50:07,637: process_command() 'Could not read/write configuration:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/variety/VarietyWindow.py", line 2485, in process_command
+    self.reload_config()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/site-packages/variety/VarietyWindow.py", line 390, in reload_config
+    self.previous_options = self.options
+                            ^^^^^^^^^^^^
+AttributeError: 'VarietyWindow' object has no attribute 'options'
+ERROR: 2025-03-07 20:50:15,590: get_xdg_pictures_folder() 'Could not get path to Pictures folder. Defaulting to ~/Pictures.'
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/variety/Util.py", line 818, in get_xdg_pictures_folder
+    raise Exception("Could not get path to Pictures folder. Defaulting to ~/Pictures.")
+Exception: Could not get path to Pictures folder. Defaulting to ~/Pictures.
+ERROR: 2025-03-07 20:50:15,591: get_xdg_pictures_folder() 'Could not get path to Pictures folder. Defaulting to ~/Pictures.'
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/variety/Util.py", line 818, in get_xdg_pictures_folder
+    raise Exception("Could not get path to Pictures folder. Defaulting to ~/Pictures.")
+Exception: Could not get path to Pictures folder. Defaulting to ~/Pictures.
+WARNING: 2025-03-07 20:50:15,592: load_history() 'Could not load history file, continuing without it, no worries'
+WARNING: 2025-03-07 20:50:15,609: create_menu() 'Variety Slideshow is not installed. This is an optional extension adding pan-and-zoom slideshows to Variety: see https://github.com/peterlevi/variety-slideshow for details'
+ERROR: 2025-03-07 20:50:15,742: get_xdg_pictures_folder() 'Could not get path to Pictures folder. Defaulting to ~/Pictures.'
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/variety/Util.py", line 818, in get_xdg_pictures_folder
+    raise Exception("Could not get path to Pictures folder. Defaulting to ~/Pictures.")
+Exception: Could not get path to Pictures folder. Defaulting to ~/Pictures.
+ERROR: 2025-03-07 20:50:15,742: get_xdg_pictures_folder() 'Could not get path to Pictures folder. Defaulting to ~/Pictures.'
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/variety/Util.py", line 818, in get_xdg_pictures_folder
+    raise Exception("Could not get path to Pictures folder. Defaulting to ~/Pictures.")
+Exception: Could not get path to Pictures folder. Defaulting to ~/Pictures.
+ERROR: 2025-03-07 20:50:15,744: get_xdg_pictures_folder() 'Could not get path to Pictures folder. Defaulting to ~/Pictures.'
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/variety/Util.py", line 818, in get_xdg_pictures_folder
+    raise Exception("Could not get path to Pictures folder. Defaulting to ~/Pictures.")
+Exception: Could not get path to Pictures folder. Defaulting to ~/Pictures.
+ERROR: 2025-03-07 20:50:16,020: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/variety/VarietyWindow.py", line 1166, in download_one_from
+    file = downloader.download_one()
+  File "/usr/lib/python3.13/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+    items = self.fill_queue()
+  File "/usr/lib/python3.13/site-packages/variety/FlickrDownloader.py", line 163, in fill_queue
+    raise Exception("Flickr returned error message: " + resp["message"])
+Exception: Flickr returned error message: Invalid API Key (Key has expired)
+ERROR: 2025-03-07 20:53:18,070: download_one_from() 'Could not download wallpaper:'
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/variety/VarietyWindow.py", line 1166, in download_one_from
+  File "/usr/lib/python3.13/site-packages/variety/plugins/downloaders/DefaultDownloader.py", line 141, in download_one
+  File "/usr/lib/python3.13/site-packages/variety/FlickrDownloader.py", line 163, in fill_queue
+Exception: Flickr returned error message: Invalid API Key (Key has expired)
+
+(variety:59394): Gtk-CRITICAL **: 20:53:55.380: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
+
+(variety:59394): Gtk-CRITICAL **: 20:53:55.380: gtk_widget_get_scale_factor: assertion 'GTK_IS_WIDGET (widget)' failed
