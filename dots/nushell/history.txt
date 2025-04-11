@@ -1902,3 +1902,26 @@ clear
 ls
 cd dotfiles/
 code .
+rm -rf skdot
+git clone https://github.com/sumit6702/dotfiles.git ~/skdot
+yazi
+clear
+exit
+clear
+ls
+cd skdot/dots
+clear
+ls
+rm -rf yazi
+cp -r ~/.config/yazi ./
+clear
+ls
+clear
+ls
+ls yazi
+clear
+exit
+skdot
+clear
+cd skdot
+code .
