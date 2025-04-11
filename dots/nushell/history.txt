@@ -1925,3 +1925,6 @@ skdot
 clear
 cd skdot
 code .
+git config --global user.email "owlisfragile@gmail.com"
+git config --global user.name "sumit6702"
+clear
