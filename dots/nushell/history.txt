@@ -1928,3 +1928,400 @@ code .
 git config --global user.email "owlisfragile@gmail.com"
 git config --global user.name "sumit6702"
 clear
+cd skdot
+clear
+ls
+cd dots
+clear
+ls
+clear
+cd
+clear
+ls
+nvim ~/.config/nushell/config.nu
+nvim ~/.config/nushell/nuconfig.nu
+exit
+dot
+clear
+ls
+lear
+clear
+exit
+dot
+clear
+dot
+ls
+clear
+dot
+nvim ~/.config/nushell/nuconfig.nu
+exit
+dot
+clear
+cd
+clear
+cd skdot
+./install.sh
+clear
+exit
+nvim
+rm -rf ~/.config/nvim/lua/plugins/codium.lua
+clear
+ls
+clear
+nvim
+clear
+nvim
+ls
+cd terminal-emulators/
+ls
+y
+nvim kitty.conf
+cat theme.conf
+cat hyde.conf
+nvim kitty.conf
+exit
+ls
+clear
+ls
+clear
+exit
+clear
+clearr
+ls
+clear
+exit
+c;ear
+xleawr
+clear
+clearr
+clear
+ls
+cd skdot
+clear
+ls
+clear
+ls
+clear
+ls
+sudo ./install.sh
+c;ear
+c;lear
+clear
+ls
+ls dots
+ls hyde
+clear
+ls
+ls dots/hyde
+clear
+clearr
+clear
+rclear
+clear
+ls
+ln -s ./dots/hyde/userprefs.conf ~/.config/hyde/
+clear
+yazi
+ln -s ./dots/hyde/userprefs.conf ~/.config/hypr/
+cl;ear
+c;ear
+clear
+rm -rf ~/.config/hypr/userprefs.conf
+ln -s ./dots/hyde/userprefs.conf ~/.config/hypr/
+clear
+yazi
+ln -s ~/skdot/dots/hyde/userprefs.conf ~/.config/hypr/userprefs.conf
+yazu
+yazi
+hyprctl reload
+c;ear
+clear
+nvim ~/.config/hypr/userprefs.conf
+clear
+exit
+clear
+nvim ~/skdot/scripts/auto-monitors.py
+clear
+exit
+cat ~/.config/hypr/monitors.conf
+nvim ~/skdot/scripts/auto-monitors.py
+nvim ~/.config/hypr/monitors.conf
+clear
+exit
+clear
+exit
+clear
+exit
+yay -S onlyoffice-bin
+clear
+exit
+spc
+sshpc
+nvim ~/.config/nushell/nuconfig.nu
+exit
+spc
+ssh sumitk@192.168.2.16
+nmtui
+clear
+exit
+hyprctl clients
+spc
+clear
+nvim ~/.config/hypr/userprefs.conf
+cd Downloads/
+clear
+ls
+nvim nextcloud.yaml
+spc
+clear
+geoclue
+sudo pacman -S geoclue
+ckear
+clear
+sudo systemctl --user enable geoclue
+sudo systemctl enable geoclue
+sudo systemctl start geoclue
+/usr/lib/geoclue-2.0/demos/where-am-i
+systemctl --user statu
+systemctl --user status
+clear
+systemctl --user --failed<\n>
+sudo pacman -S geoclue geoclue-demo-agent
+/usr/lib/geoclue-2.0/demos/agent &<\n>/usr/lib/geoclue-2.0/demos/where-am-i
+clear
+reboot
+/usr/lib/geoclue-2.0/demos/where-am-i
+clear
+ls
+clear
+ls
+clear
+npx create-next-app@latest
+clear
+ls
+clear
+p
+clear
+npx create-next-app@latest
+yay -S bun
+clear
+exi
+clear
+exit
+clear
+ls
+cd nextjs-ease/
+clear
+ls
+rm -rf node_modules/
+clear
+bun add -all
+bun install
+clear
+bun add @heroui/react framer-motion
+clear
+code .
+bun add next-themes
+bun dev
+cd ..
+clear
+rm -rf nextjs-ease/
+clear
+exit
+p
+clear
+git clone https://github.com/getdopamin/nextjs-hero nextjs-hero
+cd nextjs-hero/
+clear
+ls
+bun install
+clear
+cd ..
+rm -rf nextjs-hero/
+clear
+git clone https://github.com/getdopamin/nextjs-hero nextjs-hero
+cd nextjs-hero/
+clear
+pnpm
+clear
+pnpm install
+clear
+cd ..
+clear
+ls
+rm -rf nextjs-hero/
+clear
+ls
+clear
+ls
+clear
+exit
+ll
+clear
+ls
+clear
+la
+rm -rf .zen
+clear
+yay -Rns zen-browser-bin
+clear
+yay -S zen-browser-bin
+clear
+exit
+/usr/share/applications/
+clear
+ls
+clear
+ls
+clear
+zen-browser 
+cat zen.desktop
+cd
+clear
+cd skdot/scripts/
+clearr
+ls
+clear
+ls
+browser-ozone.py
+nvim browser-ozone.py
+py browser-ozone.py
+clear
+exit
+clear
+ls
+clear
+exit
+sudo pacman -Syyu
+clear
+yay -Q stremio
+sudo pacman -Q stremio
+clear
+nvim ~/.config/hypr/userprefs.conf
+exit
+nvim ~/.config/hypr/userprefs.conf
+cat /usr/share/applications/vivaldi-stable.desktop
+clear
+exit
+clear
+exit
+nvim hells.txt
+mkdir hells
+mv hells.txt ~/hells/
+clear
+ls
+cd hells
+clear
+ls
+wget -i hells.txt
+clear
+ls
+rm -rf *
+clear
+ls
+wget 'https://store-003.weur.tb-cdn.st/zip/1f00123b-ba2b-45e1-86d6-28165f740980?token=773fb669-d93a-43cb-85ea-0a02a643a3e5'
+clear
+ls
+y
+ls
+sudo pacman -Q thunar
+sudo pacman -S thunar
+clear
+exo-preferred-applications<\n>
+exo-preferred-applications
+clear
+ls
+clear
+eclear
+clear
+vlc .
+clear
+sudo pacman -Q vlc
+sudo pacman -Rns vlc
+clear
+mpv .
+clear
+ls
+cd Extras/clear
+cd Extras
+clear
+ls
+mpv 'Jigokuraku - S01 NCED (BD 1080p HEVC) [Vodes].mkv'
+cd ..
+clear
+ls
+cd ..
+cear
+clear
+ls
+rm -rf 'Jigokuraku S01 (v2) (BD 1080p HEVC) [Dual-Audio] [Vodes]/'
+clear
+ls
+clear
+exit
+clear
+exit
+clear
+exit
+cd HyDWE
+cd HyDE
+cd scripts
+clear
+ls
+clear
+cear
+clear
+cd
+clear
+cd Downloads/
+ckear
+clear
+ls
+y
+ln -s ~/Downloads/zentisu_sleep.jpg ~/.config/hyde/themes/Cat Latte/
+ln -s ~/Downloads/zentisu_sleep.jpg ~/.config/hyde/themes/Cat Latte/zentisu_sleep.jpg
+ln -s ~/Downloads/zentisu_sleep.jpg '~/.config/hyde/themes/Cat Latte/zentisu_sleep.jpg'
+ln -s ~/Downloads/zentisu_sleep.jpg ~/.config/hyde/themes/Cat\ Latte/zentisu_sleep.jpg
+ln -s ~/Downloads/zentisu_sleep.jpg "$HOME/.config/hyde/themes/Cat Latte/zentisu_sleep.jpg"
+ln -s ~/Downloads/zentisu_sleep.jpg "$HOME/.config/hyde/themes/Cat Latte"
+ln -s ~/Downloads/zentisu_sleep.jpg "$HOME/.config/hyde/themes/Cat Latte/"
+ls `~/.config/hyde/themes/Cat Latte/`
+ln -s ~/Downloads/zentisu_sleep.jpg "~/.config/hyde/themes/Cat Latte/wallpapers/"
+y
+echo $HOME
+echo env.$HOME
+echo $env.HOME
+clear
+ln -s $env.HOME/Downloads/zentisu_sleep.jpg "$env.HOME/.config/hyde/themes/Cat Latte/wallpapers"
+ln -s $env.HOME/Downloads/zentisu_sleep.jpg "~/.config/hyde/themes/Cat Latte/wallpapers"
+ln -s ~/Downloads/zentisu_sleep.jpg "~/.config/hyde/themes/Cat Latte/wallpapers"
+ln -s home/sumitk/Downloads/zentisu_sleep.jpg "home/sumitk/.config/hyde/themes/Cat Latte/wallpapers/"
+y
+clear
+cd
+clear
+Hyde wallpaper set chinese-hills.jpg
+yay -S hyde-cli
+yay -S hyde
+yay -S hyde-cli
+clear
+exit
+sudo pacman -Syy
+sudo pacman -Syyu
+hyprpaper
+hyprctl hyprpaper
+clear
+y
+nvim ~/.config/yazi/yazi.toml
+y
+clear
+nvim ~/.config/yazi/yazi.toml
+export EDITOR=nvim
+$env.config.edit_mode = 'nvim'
+$env.config.edit_mode = 'vi'
+clear
+y
+clear
+chsh -s /usr/bin/fish
+clear
+exit

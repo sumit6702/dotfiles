@@ -8,6 +8,7 @@ browser_desktops = [
     "google-chrome.desktop",
     "microsoft-edge.desktop",
     "brave-browser.desktop",
+    "zen.desktop",
 ]
 
 

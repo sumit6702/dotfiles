@@ -13,9 +13,9 @@ def update_monitors(hdmi_connected):
     with open(config_path, "w") as f:
         if hdmi_connected:
             f.write("monitor=eDP-1,disable\n")
-            f.write("monitor=HDMI-A-1,1920x1080@60.0,0x0,1.2\n")
+            f.write("monitor=HDMI-A-1,1920x1080@60.0,0x0,1.25\n")
         else:
-            f.write("monitor=eDP-1,1920x1080@60.0,1600x0,1.2\n")
+            f.write("monitor=eDP-1,1920x1080@60.0,1600x0,1.25\n")
 
 
 def apply_changes():

@@ -4,7 +4,7 @@ alias ll = ls -l
 alias la = ls -a
 
 alias p = cd projects
-alias sshpc = ssh sumitk@192.168.0.187
+alias spc = ssh sumitk@192.168.2.16
 alias sshon = wol -i 192.168.0.187 e0:d5:5e:01:a4:d1
 
 alias ys = yay -S
@@ -14,6 +14,7 @@ alias ui = sudo pacman -Rns
 
 alias ff = fastfetch
 alias py = python
+alias dot = bash ~/skdot/install.sh
 
 # PATH VARIABELS
 $env.JAVA_HOME = "/usr/lib/jvm/java-21-openjdk"
