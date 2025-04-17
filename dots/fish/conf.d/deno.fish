@@ -1,1 +1,0 @@
-source "/home/sumit/.deno/env.fish"
