@@ -1,4 +1,3 @@
-set -x NODE_OPTIONS '--disable-warning=ExperimentalWarning'
 alias l='eza -lh  --icons=auto' # long list
 alias ls='eza -1   --icons=auto' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
@@ -20,7 +19,7 @@ alias ze='zellij'
 alias p='cd projects'
 alias l='cd learning'
 alias stm='systemctl'
-alias serverssh='ssh sumitk@192.168.0.187'
+alias spc='ssh sumitk@192.168.2.16'
 alias serveron='wol -i 192.168.0.187 e0:d5:5e:01:a4:d1'
 
 abbr mkdir 'mkdir -p'

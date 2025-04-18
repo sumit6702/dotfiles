@@ -19,7 +19,6 @@ alias dot = bash ~/skdot/install.sh
 # PATH VARIABELS
 $env.JAVA_HOME = "/usr/lib/jvm/java-21-openjdk"
 $env.PATH = ($env.PATH | append $"($env.HOME)/.local/bin")
-$env.NODE_OPTIONS = "--disable-warning=ExperimentalWarning"
 $env.BUN_INSTALL = $"($env.HOME)/.bun"
 $env.PATH = ($env.PATH | prepend $"($env.BUN_INSTALL)/bin")
 

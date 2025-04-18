@@ -9,6 +9,8 @@ browser_desktops = [
     "microsoft-edge.desktop",
     "brave-browser.desktop",
     "zen.desktop",
+    "bitwarden.desktop",
+    "vivaldi-stable.desktop",
 ]
 
 
