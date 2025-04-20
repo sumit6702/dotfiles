@@ -4,6 +4,7 @@
 GREEN='\033[0;32m'
 CYAN='\033[0;36m'
 RED='\033[0;31m'
+GRAY='\033[0;37m'
 NC='\033[0m'
 
 # list of Pacman packages to install
@@ -23,6 +24,8 @@ PACMAN=(
     "rustup"
     "python-pip"
     "zig"
+    "zed"
+    "mpv"
     "adobe-source-han-sans-otc-fonts"
     "adobe-source-han-serif-otc-fonts"
     "noto-fonts-cjk"
@@ -37,8 +40,6 @@ AUR=(
     "onlyoffice-bin"
     "spotify"
     "jellyfin-media-player"
-    "mpv-git"
-    "zed-git"
     "pnpm-bin"
     "fluent-icon-theme-git"
     "whitesur-icon-theme"
@@ -64,7 +65,7 @@ install_pacman() {
             echo -e "${GREEN}[SUCCESS]${NC} Installing $package..."
             sudo pacman -S --noconfirm "$package"
         else
-            echo -e "${RED}[ERROR]${NC} $package is already installed."
+            echo -e "${GRAY}[INSTALLED]${NC} $package is already installed."
         fi
     done
 }
@@ -75,7 +76,7 @@ install_aur() {
             echo -e "${GREEN}[SUCCESS]${NC} Installing $package..."
             yay -S --noconfirm "$package"
         else
-            echo -e "${RED}[ERROR]${NC} $package is already installed."
+            echo -e "${GRAY}[INSTALLED]${NC} $package is already installed."
         fi
     done
 }
@@ -107,6 +108,11 @@ while true; do
     3)
         echo -e "${GREEN}Bye!${NC}"
         exit 0
+        ;;
+    4)
+        install_pacman
+        check_yay
+        install_aur
         ;;
     *)
         echo -e "${RED}[ERROR]${NC} Invalid choice. Please try again."
