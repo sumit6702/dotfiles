@@ -26,6 +26,7 @@ PACMAN=(
     "zig"
     "zed"
     "mpv"
+    "qbittorrent"
     "adobe-source-han-sans-otc-fonts"
     "adobe-source-han-serif-otc-fonts"
     "noto-fonts-cjk"
