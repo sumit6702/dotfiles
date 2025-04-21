@@ -11,6 +11,8 @@ browser_desktops = [
     "zen.desktop",
     "bitwarden.desktop",
     "vivaldi-stable.desktop",
+    "enteauth.desktop",
+    "code.desktop",
 ]
 
 

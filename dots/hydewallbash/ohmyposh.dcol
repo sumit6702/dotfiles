@@ -1,4 +1,4 @@
-$HOME/.config/ohmyposh/omp_wallbash.json
+$HOME/dotfiles/dots/user_fish/omp.json
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
