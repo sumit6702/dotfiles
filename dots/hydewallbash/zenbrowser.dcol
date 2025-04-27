@@ -1,4 +1,4 @@
-$HOME/.zen/l3mroakm.Default (release)/chrome/userChrome.css|pkill zen && nohup zen-browser
+$HOME/.zen/"l3mroakm.Default (release)"/chrome/userChrome.css
 
 html#main-window {
         --zen-primary-color: #<wallbash_txt1> !important;

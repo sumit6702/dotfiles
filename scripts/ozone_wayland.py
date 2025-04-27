@@ -13,6 +13,7 @@ browser_desktops = [
     "vivaldi-stable.desktop",
     "enteauth.desktop",
     "code.desktop",
+    "jdownloader.desktop",
 ]
 
 
