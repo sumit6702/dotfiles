@@ -1,7 +1,7 @@
 set -g fish_greeting ""
 
 alias l='eza -lh  --icons=auto' # long list
-alias ls='eza -1   --icons=auto' # short list
+alias ls='eza -a   --icons=always' # short list
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first' # long list all
 alias ld='eza -lhD --icons=auto' # long list dirs
 alias lt='eza --icons=auto --tree' # list folder as tree
@@ -45,4 +45,4 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 
 zoxide init --cmd cd fish | source
-#oh-my-posh init fish --config ~/.config/fish/user_fish/omp.json | source
+oh-my-posh init fish --config $HOME/.local/share/oh-my-posh/themes/1_shell.omp.json | source
