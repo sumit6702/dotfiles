@@ -1,0 +1,13 @@
+# Ignore plugin manager generated files
+fish_plugins
+fish_variables
+
+# Ignore plugin completions and functions (managed by Fisher)
+completions/
+functions/
+
+# Optional: Ignore theme files (if managed externally or not customized)
+themes/
+
+# Optional: Ignore plugin auto-configuration
+conf.d/fisher.fish

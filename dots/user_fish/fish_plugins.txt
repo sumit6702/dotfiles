@@ -1,8 +1,0 @@
-jorgebucaran/fisher
-jorgebucaran/nvm.fish
-jethrokuan/z
-oh-my-fish/theme-bobthefish
-ilancosman/tide@v6
-franciscolourenco/done
-edc/bass
-patrickf1/fzf.fish
