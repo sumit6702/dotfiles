@@ -1,0 +1,38 @@
+@import "latte.css";
+
+* {
+  font-family: SauceCodePro Nerd Font;
+  font-size: 17px;
+  min-height: 0;
+}
+
+#waybar {
+  background: @base;
+  color: @text;
+}
+
+#mpd,
+#pulseaudio,
+#network,
+#power-profiles-daemon,
+#battery,
+#clock,
+#tray,
+#custom-power {
+  margin-right: 5px;
+  padding: 0px 5px;
+}
+
+#workspaces button {
+    color: @text;
+}
+
+#workspaces button.active {
+    font-weight: bold;
+    color: @mauve;
+}
+
+#workspaces button.urgent {
+    color: @red;
+}
+
