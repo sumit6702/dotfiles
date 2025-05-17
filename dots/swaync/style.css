@@ -1,0 +1,70 @@
+@import url("themes/latte.css");
+
+/* General background and borders */
+* {
+    font-family: JetBrainsMono Nerd Font, sans-serif;
+    font-size: 14px;
+    color: @text;
+    background-color: transparent;
+}
+
+.control-center, .notification {
+    background-color: @base;
+    border: 1px solid @surface0;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.notification.critical {
+    border-color: @red;
+    background-color: mix(@red, @base, 0.1);
+}
+
+.notification.low {
+    border-color: @surface1;
+}
+
+.notification.normal {
+    border-color: @blue;
+}
+
+.notification .title {
+    font-weight: bold;
+    color: @text;
+}
+
+.notification .body {
+    color: @subtext0;
+}
+
+.notification .icon {
+    border-radius: 6px;
+}
+
+.control-center .widget-buttons button {
+    background-color: @surface1;
+    color: @text;
+    border-radius: 8px;
+    padding: 6px 10px;
+    margin: 5px;
+}
+
+.control-center .widget-buttons button:hover {
+    background-color: @surface2;
+}
+
+.control-center .widget-mpris {
+    margin-top: 10px;
+    border-top: 1px solid @surface1;
+    padding-top: 10px;
+}
+
+.control-center .widget-mpris .title {
+    font-weight: bold;
+    color: @blue;
+}
+
+.control-center .widget-mpris .subtitle {
+    color: @overlay0;
+}
+
