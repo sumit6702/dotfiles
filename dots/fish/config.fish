@@ -18,7 +18,7 @@ alias upg='sudo pacman -Syu && yay -Syu'
 alias yi='yay -S'
 alias yu='yay -Rs'
 alias ze='zellij'
-alias p='cd projects'
+alias p='cd ~/Projects'
 alias l='cd learning'
 alias stm='systemctl'
 alias spc='ssh sumitk@192.168.2.16'
@@ -35,6 +35,7 @@ function y
     rm -f -- "$tmp"
 end
 
+
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 fish_add_path /home/sumit/.spicetify
@@ -45,4 +46,4 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 
 zoxide init --cmd cd fish | source
-oh-my-posh init fish --config $HOME/.local/share/oh-my-posh/themes/1_shell.omp.json | source
+oh-my-posh init fish --config $HOME/.local/share/oh-my-posh/themes/bubbles.omp.json | source

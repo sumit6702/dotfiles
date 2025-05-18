@@ -8,11 +8,13 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
+  -- { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.color.transparent-nvim" },
   { import = "astrocommunity.completion.codeium-nvim" },
   { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.utility.noice-nvim" },
-  { import = "astrocommunity.scrolling.neoscroll-nvim" },
-  { import = "astrocommunity.motion.flash-nvim" },
+  -- { import = "astrocommunity.scrolling.neoscroll-nvim" },
+  -- { import = "astrocommunity.motion.flash-nvim" },
+  -- { import = "astrocommunity.editing-support.zen-mode-nvim" },
   -- import/override with your plugins folder
 }
